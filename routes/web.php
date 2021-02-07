@@ -20,6 +20,9 @@ Route::get('usuarios/{id}/{estado}/cambiarEstado', 'UsuarioController@cambiarEst
 Route::resource('usuarios', 'UsuarioController', ['only' => ['index', 'show', 'create', 'store', 'edit', 'update']]);
 
 Route::resource('autores', 'AutorController');
+Route::resource('materias', 'MateriaController');
+Route::resource('materiales', 'MaterialController');
+
 
 //Route::get('/', function () {
 //    return view('layouts.app');
