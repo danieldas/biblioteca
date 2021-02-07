@@ -21,6 +21,7 @@ Route::resource('usuarios', 'UsuarioController', ['only' => ['index', 'show', 'c
 
 Route::resource('autores', 'AutorController');
 
+
 //Route::get('/', function () {
 //    return view('layouts.app');
 //});

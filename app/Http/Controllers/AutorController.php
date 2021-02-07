@@ -31,7 +31,7 @@ class AutorController extends Controller
 
         $autor = Autor::create($valores);
         return redirect()
-            ->route('autores.show', ['autor' => $autor->id])
+            ->route('autores.show', ['autore' => $autor->id])
             ->with('mensaje', 'El autor se ha creado con éxito');
     }
 
@@ -55,7 +55,7 @@ class AutorController extends Controller
         $autor->save();
 
         return redirect()->route('autores.show',
-            ['autor' => $autor->id]
+            ['autore' => $autor->id]
         )->with('mensaje', 'El autor se ha modificado');
 
     }

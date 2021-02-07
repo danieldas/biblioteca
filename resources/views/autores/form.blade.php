@@ -5,6 +5,8 @@
         </div>
     </div>
 @endif
+
+
 <div class="form-group">
     <div class="col-lg-2">
         {!! Form::label('Nombre', 'Nombre *:', ['class' => 'control-label']) !!}
@@ -14,6 +16,7 @@
         {!! Form::text('nombre', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
+
 </div>
 
 

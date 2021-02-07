@@ -12,6 +12,6 @@ class Autor extends Model
     protected $primaryKey = 'id';
 
     public $fillable = ['id',
-        'nombre'
+        'nombre',
     ];
 }
