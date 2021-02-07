@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\StoreMaterial;
 use App\Models\Material;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,7 @@ class MaterialController extends Controller
         return view('materiales.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreMaterial $request)
     {
         $valores = $request->all();
 
@@ -47,7 +48,7 @@ class MaterialController extends Controller
         return view('materiales.edit', compact('material'));
     }
 
-    public function update(Request $request, $id)
+    public function update(StoreMaterial $request, $id)
     {
         $material = Material::findOrFail($id);
 
