@@ -4,6 +4,14 @@
 
 
 <li >
-    <a href=""><i class="fa fa-list"></i><span>Materiales</span></a>
+    <a href="{{ route('autores.index') }}"><i class="fa fa-address-book"></i><span>Autores</span></a>
+</li>
+
+<li >
+    <a href="{{ route('materias.index') }}"><i class="fa fa-list"></i><span>Materias</span></a>
+</li>
+
+<li >
+    <a href="{{ route('materiales.index') }}"><i class="fa fa-list"></i><span>Materiales</span></a>
 </li>
 
