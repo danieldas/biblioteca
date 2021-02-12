@@ -17,6 +17,8 @@ class Autor extends Migration
 
             $table->increments('id');
             $table->string('nombre', 100);
+            $table->boolean('alta')->default(true);
+
 
             $table->timestamps();
         });

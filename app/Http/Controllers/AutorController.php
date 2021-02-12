@@ -11,10 +11,17 @@ class AutorController extends Controller
 {
     public function index(Request $request)
     {
+        $alta = $request->alta;
+        if($alta == null)
+        {
+            $alta=true;
+        }
+
         $filtro = $request->buscar;
         $filtro = "%$filtro%";
 
-        $autores = Autor::where('nombre', 'like', $filtro)
+        $autores = Autor::
+            where([['nombre', 'like', $filtro], ['alta', $alta]])
             ->orderBy('nombre')
             ->paginate(50);
         return view('autores.index', compact('autores'));
@@ -58,5 +65,21 @@ class AutorController extends Controller
             ['autore' => $autor->id]
         )->with('mensaje', 'El autor se ha modificado');
 
+    }
+
+    public function cambiarEstado($id, $estado)
+    {
+        $autor = Autor::findOrFail($id);
+        $autor->update(array('alta' => $estado));
+        $autor->save();
+        if($estado)
+        {
+            return redirect()->route('autores.index')
+                ->with('mensaje', 'El autor ha sido dado de alta');
+        }
+        else{
+            return redirect()->route('autores.index')
+                ->with('mensajeRojo', 'El autor ha sido dado de baja');
+        }
     }
 }

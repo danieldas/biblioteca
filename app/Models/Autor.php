@@ -13,5 +13,6 @@ class Autor extends Model
 
     public $fillable = ['id',
         'nombre',
+        'alta'
     ];
 }

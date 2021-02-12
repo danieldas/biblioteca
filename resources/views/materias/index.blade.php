@@ -32,7 +32,7 @@
                             {!! Form::label('buscar', 'Filtro:') !!}
                             {!! Form::text('buscar', old('', Request::input('buscar')), [
                                             'class' => 'form-control ',
-                                            'placeholder' => 'Buscar por Nombre...',
+                                            'placeholder' => 'Buscar por Nombre, Sigla...',
                                             'autocomplete'=>'off'
                                             ]) !!}
                         </div>

@@ -18,6 +18,7 @@ class Materia extends Migration
         $table->increments('id');
         $table->string('nombre', 100);
         $table->string('sigla', 10);
+        $table->boolean('alta')->default(true);
 
         $table->timestamps();
     });

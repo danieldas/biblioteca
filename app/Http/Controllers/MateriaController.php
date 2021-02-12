@@ -15,6 +15,7 @@ class MateriaController extends Controller
         $filtro = "%$filtro%";
 
         $materias = Materia::where('nombre', 'like', $filtro)
+            ->orWhere('sigla', 'like', $filtro)
             ->orderBy('nombre')
             ->paginate(50);
         return view('materias.index', compact('materias'));

@@ -23,6 +23,8 @@ Route::resource('autores', 'AutorController');
 Route::resource('materias', 'MateriaController');
 Route::resource('materiales', 'MaterialController');
 
+Route::get('autores/{id}/{estado}/cambiarEstado', 'AutorController@cambiarEstado')->name('autores.cambiarEstado');
+
 
 
 //Route::get('/', function () {

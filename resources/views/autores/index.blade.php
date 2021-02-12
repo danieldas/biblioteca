@@ -36,6 +36,18 @@
                                             'autocomplete'=>'off'
                                             ]) !!}
                         </div>
+                        <div class="form-group col-sm-2">
+                            {!! Form::label('estado', 'Estado:') !!}
+
+                            {!! Form::select('alta',
+
+                                            \App\Patrones\Fachada::usuarioEstados(),
+                                            old('', Request::input('alta')),
+                                            [
+                                                'class' => 'form-control ',
+                                            ])
+                                        !!}
+                        </div>
 
 
                         <div class="form-group col-sm-2" style="margin-top: 25px">
