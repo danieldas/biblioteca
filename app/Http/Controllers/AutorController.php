@@ -17,7 +17,6 @@ class AutorController extends Controller
         {
             $alta=true;
         }
-
         $filtro = $request->buscar;
         $filtro = "%$filtro%";
 
