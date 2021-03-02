@@ -17,4 +17,11 @@ class Revista extends Model
         'material_id',
         'procedencia'
     ];
+
+
+//    public $with = ['material'];
+    public function material()
+    {
+        return $this->belongsTo(Material::class);
+    }
 }

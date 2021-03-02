@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\StoreMaterial;
+use App\Models\Libro;
 use App\Models\Material;
 use Illuminate\Http\Request;
 
@@ -14,6 +15,9 @@ class MaterialController extends Controller
     {
         $filtro = $request->buscar;
         $filtro = "%$filtro%";
+
+        $libro=Libro::with('material')->get();
+//        dd($libro);
 
         $materiales = Material::where('titulo', 'like', $filtro)
             ->orderBy('titulo')

@@ -28,4 +28,15 @@ class Material extends Model
         'catalogo',
         'ejemplares'
     ];
+
+    public function libro()
+    {
+        return $this->hasOne(\App\Models\Libro::class, 'material_id');
+    }
+
+    public function revista()
+    {
+        return $this->hasOne(\App\Models\Revista::class, 'material_id');
+    }
+
 }

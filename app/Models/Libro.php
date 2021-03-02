@@ -18,4 +18,10 @@ class Libro extends Model
         'material_id',
         'costo'
     ];
+
+//    public $with = ['material'];
+    public function material()
+    {
+        return $this->belongsTo(Material::class);
+    }
 }
