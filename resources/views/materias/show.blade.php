@@ -31,6 +31,10 @@
                         {!! Form::label('sigla', 'Sigla:') !!}
                         <p>{{ $materia->sigla }}</p>
                     </div>
+                    <div class="form-group">
+                        {!! Form::label('sigla', 'Sigla:') !!}
+                        <p>{{ $materia->alta}}</p>
+                    </div>
 
 
 
