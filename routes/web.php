@@ -22,10 +22,15 @@ Route::resource('usuarios', 'UsuarioController', ['only' => ['index', 'show', 'c
 Route::resource('autores', 'AutorController');
 Route::resource('materias', 'MateriaController');
 Route::resource('materiales', 'MaterialController');
+Route::resource('carreras', 'CarreraController');
+Route::resource('libros', 'LibroController');
+Route::resource('tesis', 'TesisController');
+Route::resource('profocoms', 'ProfocomController');
+Route::resource('revistas', 'RevistaController');
 
 Route::get('autores/{id}/{estado}/cambiarEstado', 'AutorController@cambiarEstado')->name('autores.cambiarEstado');
-
-
+Route::get('materias/{id}/{estado}/cambiarEstado', 'MateriaController@cambiarEstado')->name('materias.cambiarEstado');
+Route::get('carreras/{id}/{estado}/cambiarEstado', 'CarreraController@cambiarEstado')->name('carreras.cambiarEstado');
 
 //Route::get('/', function () {
 //    return view('layouts.app');

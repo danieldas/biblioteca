@@ -6,14 +6,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Materia extends Model
+class Profocom extends Model
 {
-    protected $table = 'materia';
+    protected $table = 'profocom';
     protected $primaryKey = 'id';
 
     public $fillable = ['id',
-        'nombre',
-        'sigla',
-        'alta'
+        'codigo',
+        'material_id'
     ];
 }

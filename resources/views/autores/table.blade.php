@@ -22,6 +22,7 @@
 
                         <a href="{{ route('autores.edit', [$autor->id]) }}" class='btn btn-warning btn-xs'><i
                                 class="glyphicon glyphicon-edit" title="Editar"></i></a>
+
                         <a href="{{ route('autores.cambiarEstado', ['id' => $autor->id, 'estado' => '0'])}}"
                            class="btn btn-danger btn-xs" title="Dar Baja">
                             <i class="glyphicon glyphicon-arrow-down"></i>
