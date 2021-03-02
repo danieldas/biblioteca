@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Material
+            Carrera
         </h1>
     </section>
     <div class="content">
@@ -23,24 +23,14 @@
 
 
                     <div class="form-group">
-                        {!! Form::label('titulo', 'Titulo:') !!}
-                        <p>{{ $material->titulo }}</p>
+                        {!! Form::label('nombre', 'Nombre:') !!}
+                        <p>{{ $carrera->nombre }}</p>
                     </div>
 
-{{--                    <div class="form-group">--}}
-{{--                        {!! Form::label('editorial', 'Editorial:') !!}--}}
-{{--                        <p>{{ $material->editorial }}</p>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="form-group">--}}
-{{--                        {!! Form::label('edicion', 'Edicion:') !!}--}}
-{{--                        <p>{{ $material->edicion }}</p>--}}
-{{--                    </div>--}}
 
 
 
-
-                    <a href="{{ route('materiales.index') }}" class="btn btn-default">Volver</a>
+                    <a href="{{ route('carreras.index') }}" class="btn btn-default">Volver</a>
                 </div>
             </div>
         </div>

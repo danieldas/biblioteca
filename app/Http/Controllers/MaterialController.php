@@ -15,8 +15,8 @@ class MaterialController extends Controller
         $filtro = $request->buscar;
         $filtro = "%$filtro%";
 
-        $materiales = Material::where('nombre', 'like', $filtro)
-            ->orderBy('nombre')
+        $materiales = Material::where('titulo', 'like', $filtro)
+            ->orderBy('titulo')
             ->paginate(50);
         return view('materiales.index', compact('materiales'));
     }

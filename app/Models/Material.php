@@ -12,8 +12,20 @@ class Material extends Model
     protected $primaryKey = 'id';
 
     public $fillable = ['id',
-        'nombre',
-        'editorial',
-        'edicion'
+        'titulo',
+        'aniopublic',
+        'nropaginas',
+        'forma',
+        'tipo',
+        'idioma',
+        'urldesacarga',
+        'observacion',
+        'estado',
+        'condicion',
+        'isbn',
+        'disponibilidad',
+        'descripcion',
+        'catalogo',
+        'ejemplares'
     ];
 }

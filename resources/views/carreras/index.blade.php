@@ -2,9 +2,9 @@
 
 @section('content')
     <section class="content-header">
-        <h1 class="pull-left">Material</h1>
+        <h1 class="pull-left">Carrera</h1>
         <h1 class="pull-right">
-            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('materiales.create') }}">Agregar Material</a>
+            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('carreras.create') }}">Agregar carrera</a>
         </h1>
     </section>
     <div class="content">
@@ -26,15 +26,27 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-sm-12">
-                        {!! Form::open(['route' => 'materiales.index', 'method'=>'get']) !!}
+                        {!! Form::open(['route' => 'carreras.index', 'method'=>'get']) !!}
 
                         <div class="form-group col-sm-6">
                             {!! Form::label('buscar', 'Filtro:') !!}
                             {!! Form::text('buscar', old('', Request::input('buscar')), [
                                             'class' => 'form-control ',
-                                            'placeholder' => 'Buscar por Nombre , Editorial , Edicion...',
+                                            'placeholder' => 'Buscar por Nombre...',
                                             'autocomplete'=>'off'
                                             ]) !!}
+                        </div>
+                        <div class="form-group col-sm-2">
+                            {!! Form::label('estado', 'Estado:') !!}
+
+                            {!! Form::select('alta',
+
+                                            \App\Patrones\Fachada::usuarioEstados(),
+                                            old('', Request::input('alta')),
+                                            [
+                                                'class' => 'form-control ',
+                                            ])
+                                        !!}
                         </div>
 
 
@@ -46,13 +58,15 @@
                         {!! Form::close() !!}
                     </div>
                 </div>
-                @include('materiales.table')
+                @include('carreras.table')
             </div>
         </div>
         <div class="text-center">
-            {!! $materiales->appends([
+            {!! $carreras->appends([
                     'buscar' => Request::input('buscar')
                     ])->links() !!}
         </div>
     </div>
 @endsection
+
+

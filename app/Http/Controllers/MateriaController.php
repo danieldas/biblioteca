@@ -12,11 +12,15 @@ class MateriaController extends Controller
 {
     public function index(Request $request)
     {
+        $alta = $request->alta;
+        if ($alta == null) {
+            $alta = true;
+        }
         $filtro = $request->buscar;
         $filtro = "%$filtro%";
 
-        $materias = Materia::where('nombre', 'like', $filtro)
-            ->orWhere('sigla', 'like', $filtro)
+        $materias = Materia::where([['nombre', 'like', $filtro], ['alta', $alta]])
+            ->orWhere([['sigla', 'like', $filtro], ['alta', $alta]])
             ->orderBy('nombre')
             ->paginate(50);
         return view('materias.index', compact('materias'));
@@ -32,7 +36,7 @@ class MateriaController extends Controller
         $valores = $request->all();
 
         $materia = Materia::create($valores);
-        return redirect()
+       return redirect()
             ->route('materias.show', ['materia' => $materia->id])
             ->with('mensaje', 'la materia se ha registrado con éxito');
     }
@@ -59,7 +63,21 @@ class MateriaController extends Controller
         return redirect()->route('materias.show',
             ['materia' => $materia->id]
         )->with('mensaje', 'la materia se ha modificado');
+    }
 
+    public function cambiarEstado($id, $estado)
+    {
+        $materia = Materia::findOrFail($id);
+        $materia->update(array('alta' => $estado));
+        $materia->save();
+        if ($estado) {
+            return redirect()->route('materias.index')
+                ->with('mensaje', 'La materia ha sido dado de alta');
+        } else {
+            return redirect()->route('materias.index')
+                ->with('mensajeRojo', 'La materia ha sido dado de baja');
+        }
     }
 }
+
 

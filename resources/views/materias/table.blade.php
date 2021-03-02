@@ -22,6 +22,17 @@
 
                         <a href="{{ route('materias.edit', [$materia->id]) }}" class='btn btn-warning btn-xs'><i
                                 class="glyphicon glyphicon-edit" title="Editar"></i></a>
+                        @if($materia->alta)
+                        <a href="{{ route('materias.cambiarEstado', ['id' => $materia->id, 'estado' => '0'])}}"
+                           class="btn btn-danger btn-xs" title="Dar Baja">
+                            <i class="glyphicon glyphicon-arrow-down"></i>
+                        </a>
+                        @else
+                        <a href="{{ route('materias.cambiarEstado', ['id' => $materia->id, 'estado' => '1'])}}"
+                           class="btn btn-success btn-xs" title="Dar alfa">
+                            <i class="glyphicon glyphicon-arrow-up"></i>
+                        </a>
+                            @endif
                     </div>
                 </td>
             </tr>
