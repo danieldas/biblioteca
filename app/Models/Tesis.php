@@ -20,4 +20,9 @@ class Tesis extends Model
         'material_id',
         'carrera_id'
     ];
+
+    public function material()
+    {
+        return $this->belongsTo(Material::class);
+    }
 }
