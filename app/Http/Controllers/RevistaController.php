@@ -17,9 +17,12 @@ class RevistaController extends Controller
         $filtro = $request->buscar;
         $filtro = "%$filtro%";
 
-        $revistas = Revista::
-//        where('titulo', 'like', $filtro)
-            Where('editorial', 'like', $filtro)
+        $revistas = Revista::with('material')
+            ->where('editorial', 'like', $filtro)
+            ->orWhereHas('material', function ($query) use ($filtro) {
+                $query
+                    ->where('titulo', 'like', $filtro);
+            })
             ->orderByDesc('created_at')
             ->paginate('50');
         return view('revistas.index', compact('revistas'));
