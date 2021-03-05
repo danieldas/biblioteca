@@ -14,6 +14,12 @@ class DatabaseSeeder extends Seeder
         $this->call(UsuarioSeeder::class);
         $this->call(AutorSeeder::class);
         $this->call(MateriaSeeder::class);
+        $this->call(MaterialSeeder::class);
+        $this->call(LibroSeeder::class);
+        $this->call(ProfocomSeeder::class);
+        $this->call(RevistaSeeder::class);
+        $this->call(CarreraSeeder::class);
+        $this->call(TesisSeeder::class);
         // $this->call(UserSeeder::class);
     }
 }

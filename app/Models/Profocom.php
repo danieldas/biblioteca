@@ -15,4 +15,10 @@ class Profocom extends Model
         'codigo',
         'material_id'
     ];
+
+    public function material()
+    {
+        return $this->belongsTo(Material::class);
+    }
+
 }

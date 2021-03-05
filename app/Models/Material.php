@@ -18,7 +18,7 @@ class Material extends Model
         'forma',
         'tipo',
         'idioma',
-        'urldesacarga',
+        'urldescarga',
         'observacion',
         'estado',
         'condicion',
@@ -37,6 +37,16 @@ class Material extends Model
     public function revista()
     {
         return $this->hasOne(\App\Models\Revista::class, 'material_id');
+    }
+
+    public function tesis()
+    {
+        return $this->hasOne(\App\Models\Tesis::class, 'material_id');
+    }
+
+    public function profocom()
+    {
+        return $this->hasOne(\App\Models\Profocom::class, 'material_id');
     }
 
 }
