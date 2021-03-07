@@ -28,7 +28,7 @@ class MaterialSeeder extends Seeder
             'disponibilidad' => 'libre',
             'descripcion' => 'anillado',
             'catalogo' => 'EEE7',
-            'ejemplares' => '2'
+            'ejemplares' => '3'
         ]);
 
         Material::create([
@@ -66,7 +66,7 @@ class MaterialSeeder extends Seeder
             'disponibilidad' => 'libre',
             'descripcion' => 'anillado',
             'catalogo' => '896',
-            'ejemplares' => '4'
+            'ejemplares' => '3'
         ]);
         Material::create([
 
@@ -102,7 +102,7 @@ class MaterialSeeder extends Seeder
             'disponibilidad' => 'libre',
             'descripcion' => 'anillado',
             'catalogo' => 'EEE7',
-            'ejemplares' => '2'
+            'ejemplares' => '1'
         ]);
         Material::create([
 

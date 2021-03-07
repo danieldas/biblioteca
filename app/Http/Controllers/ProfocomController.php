@@ -19,6 +19,10 @@ class ProfocomController extends Controller
         $profocoms = Profocom::
 //        where('titulo', 'like', $filtro)
         Where('codigo', 'like', $filtro)
+        ->orWhereHas('material', function ($query) use ($filtro) {
+            $query->where('titulo', 'like', $filtro)
+            ->orWhere('aniopublic', 'like', $filtro);
+        })
             ->orderByDesc('created_at')
             ->paginate('50');
         return view('profocoms.index', compact('profocoms'));

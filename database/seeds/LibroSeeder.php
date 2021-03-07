@@ -39,5 +39,14 @@ class LibroSeeder extends Seeder
             'costo' => '200',
 
         ]);
+        Libro::create([
+
+            'editorial' => 'kipus',
+            'edicion' => 'segunada',
+            'procedencia' => 'nuevo',
+            'material_id' => '4',
+            'costo' => '100',
+
+        ]);
     }
 }
