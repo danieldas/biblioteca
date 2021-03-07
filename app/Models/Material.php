@@ -4,6 +4,7 @@
 namespace App\Models;
 
 
+use App\Http\Controllers\MaterialController;
 use Illuminate\Database\Eloquent\Model;
 
 class Material extends Model
@@ -28,6 +29,12 @@ class Material extends Model
         'catalogo',
         'ejemplares'
     ];
+
+    public function getEscritoresAttribute()
+    {
+        $controlador = new MaterialController();
+        return $controlador->getAutores($this->id);
+    }
 
     public function libro()
     {

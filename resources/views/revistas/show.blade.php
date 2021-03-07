@@ -94,6 +94,10 @@
                         {!! Form::label('ejemplares', 'Ejemplares:') !!}
                         <p>{{ $revista->material->ejemplares }}</p>
                     </div>
+                    <div class="form-group">
+                        {!! Form::label('autores', 'Autores:') !!}
+                        <p>{{ $revista->material->escritores }}</p>
+                    </div>
 
 
 

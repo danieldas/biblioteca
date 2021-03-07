@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\StoreMaterial;
+use App\Models\Autor;
 use App\Models\Libro;
 use App\Models\Material;
 use Illuminate\Http\Request;
+use DB;
 
 class MaterialController extends Controller
 {
@@ -63,6 +65,22 @@ class MaterialController extends Controller
             ['materiale' => $material->id]
         )->with('mensaje', 'El material se ha modificado');
 
+    }
+
+    public function getAutores($material_id)
+    {
+        $autores=
+            Autor::
+            join('autor_material', 'autor_material.autor_id', '=', 'autor.id')
+            ->select(DB::raw("GROUP_CONCAT(autor.nombre SEPARATOR ', ') as nombres"))
+            ->where('material_id', $material_id)
+            ->groupBy('material_id')
+            ->first();
+
+        if(empty($autores))
+           return '';
+        else
+            return $autores->nombres;
     }
 }
 
