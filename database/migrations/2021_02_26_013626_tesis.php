@@ -16,11 +16,13 @@ class Tesis extends Migration
         Schema::create('tesis', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->string('categoria', 30);
-            $table->string('tutor', 100);
-            $table->string('revisor', 100);
-            $table->unsignedInteger('nroejemplares');
-            $table->unsignedInteger('disponibles');
+            $table->enum('categoria', [
+                'Proyecto de grado',
+                'Tesis de grado',
+                'Trabajo dirigido'
+            ])->default('Proyecto de grado');
+            $table->string('tutor', 100)->nullable();
+            $table->string('revisor', 100)->nullable();
 
             $table->unsignedInteger('carrera_id');
             $table->foreign('carrera_id')

@@ -17,20 +17,29 @@ class Material extends Migration
 
             $table->increments('id');
             $table->string('titulo', 200);
-            $table->unsignedInteger('aniopublic' );
-            $table->unsignedInteger('nropaginas');
-            $table->string('forma', 10);
-            $table->string('tipo', 10);
-            $table->string('idioma', 10);
-            $table->string('urldescarga', 500);
-            $table->string('observacion', 200);
-            $table->string('estado', 5);
-            $table->string('condicion', 20);
+            $table->unsignedInteger('anio_publicacion' );
+            $table->unsignedInteger('nro_paginas');
+            $table->enum('forma', [
+                'Original',
+                'Fotocopia',
+            ])->default('Original');
+            $table->enum('tipo', [
+                'Libro', 'Tesis', 'Profocom', 'Revista'
+            ])->default('Libro');
+
+            $table->string('idioma', 15);
+            $table->string('url', 500)->nullable();
+            $table->string('observacion', 200)->nullable();
+            $table->boolean('alta')->default(true);
+            $table->enum('condicion', [
+                'Bueno',
+                'Regular',
+                'Malo'
+            ])->default('Bueno');
             $table->string('isbn', 20);
-            $table->string('disponibilidad', 20);
-            $table->string('descripcion', 200);
-            $table->string('catalogo', 30);
-            $table->smallInteger('ejemplares');
+            $table->string('disponibilidad')->default(true);
+            $table->string('descripcion', 200)->nullable();
+            $table->string('catalogo', 30)->nullable();
 
 $table->timestamps();
 });

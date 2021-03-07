@@ -48,15 +48,7 @@ class RevistaController extends Controller
 
     public function show($id)
     {
-//        $autores=Autor::
-//        join('autor_material', 'autor_material.autor_id', '=', 'autor.id')
-//            ->select(DB::raw("GROUP_CONCAT(autor.nombre SEPARATOR ', ') as hola"))
-//            ->where('autor_material.material_id', 7)
-//            ->groupBy('autor_material.material_id')
-//        ->first();
-//        dd($autores->hola);
         $revista = Revista::findOrFail($id);
-//        dd($revista);
         return view('revistas.show', compact('revista'));
     }
 

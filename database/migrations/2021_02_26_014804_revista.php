@@ -18,7 +18,10 @@ class Revista extends Migration
             $table->increments('id');
             $table->string('edicion', 30);
             $table->string('editorial', 50);
-            $table->string('procedencia', 30);
+            $table->enum('procedencia', [
+                'Compra',
+                'Donación',
+            ])->default('Compra');
             $table->unsignedInteger('material_id');
             $table->foreign('material_id')
                 ->references('id')

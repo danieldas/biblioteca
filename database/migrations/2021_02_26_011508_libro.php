@@ -18,8 +18,11 @@ class Libro extends Migration
             $table->increments('id');
             $table->string('editorial', 50);
             $table->string('edicion', 20);
-            $table->string('procedencia', 50);
-            $table->unsignedDecimal('costo',6,2);
+            $table->enum('procedencia', [
+                'Compra',
+                'Donación',
+            ])->default('Compra');
+            $table->unsignedDecimal('costo',6,2)->nullable();
             $table->unsignedInteger('material_id');
             $table->foreign('material_id')
                 ->references('id')

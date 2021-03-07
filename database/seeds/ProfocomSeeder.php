@@ -30,11 +30,11 @@ class ProfocomSeeder extends Seeder
             'material_id' => '12',
 
         ]);
-        Profocom::create([
-
-            'codigo' => '777',
-            'material_id' => '12',
-
-        ]);
+//        Profocom::create([
+//
+//            'codigo' => '777',
+//            'material_id' => '12',
+//
+//        ]);
     }
 }

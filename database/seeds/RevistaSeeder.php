@@ -16,7 +16,7 @@ class RevistaSeeder extends Seeder
 
             'edicion' => 'primera',
             'editorial' => 'Kipus',
-            'material_id' => '9',
+            'material_id' => '7',
             'procedencia' => 'donado'
 
         ]);
@@ -24,7 +24,7 @@ class RevistaSeeder extends Seeder
 
             'edicion' => 'Primera',
             'editorial' => 'Plural',
-            'material_id' => '10',
+            'material_id' => '8',
             'procedencia' => 'Donado'
 
         ]);
@@ -32,17 +32,17 @@ class RevistaSeeder extends Seeder
 
             'edicion' => 'Santillana',
             'editorial' => 'primera',
-            'material_id' => '11',
+            'material_id' => '9',
             'procedencia' => 'donado'
 
         ]);
-        Revista::create([
-
-            'edicion' => 'Kipus',
-            'editorial' => 'segunda',
-            'material_id' => '12',
-            'procedencia' => 'nuevo'
-
-        ]);
+//        Revista::create([
+//
+//            'edicion' => 'Kipus',
+//            'editorial' => 'segunda',
+//            'material_id' => '12',
+//            'procedencia' => 'nuevo'
+//
+//        ]);
     }
 }
