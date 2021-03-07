@@ -19,6 +19,10 @@ class TesisController extends Controller
         $tesis = Tesis::
 //        where('titulo', 'like', $filtro)
         Where('tutor', 'like', $filtro)
+        ->orWhereHas('material', function ($query) use ($filtro) {
+            $query->where('tutor', 'like', $filtro)
+            ->orWhere('titulo', 'like', $filtro);
+        })
             ->orderByDesc('created_at')
             ->paginate('50');
         return view('tesis.index', compact('tesis'));

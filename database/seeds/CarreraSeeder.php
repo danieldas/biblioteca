@@ -30,6 +30,13 @@ class CarreraSeeder extends Seeder
 
         ]);
 
+        Carrera::create([
+
+            'nombre' => 'Programacion',
+
+        ]);
+
+
 
     }
 }

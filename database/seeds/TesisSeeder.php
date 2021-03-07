@@ -19,7 +19,7 @@ class TesisSeeder extends Seeder
             'revisor' => 'pedro',
             'nroejemplares' => '2',
             'disponibles' => '8',
-            'material_id' => '4',
+            'material_id' => '5',
             'carrera_id' => '1'
         ]);
         Tesis::create([
@@ -29,7 +29,7 @@ class TesisSeeder extends Seeder
             'revisor' => 'julio',
             'nroejemplares' => '3',
             'disponibles' => '8',
-            'material_id' => '5',
+            'material_id' => '6',
             'carrera_id' => '2'
         ]);
         Tesis::create([
@@ -39,7 +39,17 @@ class TesisSeeder extends Seeder
             'revisor' => 'julio',
             'nroejemplares' => '2',
             'disponibles' => '8',
-            'material_id' => '6',
+            'material_id' => '7',
+            'carrera_id' => '3'
+        ]);
+        Tesis::create([
+
+            'categoria' => 'segunda',
+            'tutor' => 'maria',
+            'revisor' => 'soledad',
+            'nroejemplares' => '3',
+            'disponibles' => '6',
+            'material_id' => '8',
             'carrera_id' => '3'
         ]);
     }
