@@ -8,6 +8,7 @@
             <th>Ejemplares</th>
             <th>Edición</th>
             <th>Editorial</th>
+            <th>Autores</th>
         </tr>
         </thead>
         <tbody>
@@ -19,6 +20,7 @@
                 <td>{{ $revista->material->ejemplares }}</td>
                 <td>{{ $revista->edicion }}</td>
                 <td>{{ $revista->editorial }}</td>
+                <td>{{ $revista->material->escritores }}</td>
                 <td>
                     <div class='btn-group'>
 
