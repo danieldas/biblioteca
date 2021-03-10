@@ -43,12 +43,12 @@
                         <p>{{ $libro->material->titulo }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('aniopublic', 'Año:') !!}
-                        <p>{{ $libro->material->aniopublic }}</p>
+                        {!! Form::label('anio_publicacion', 'Año:') !!}
+                        <p>{{ $libro->material->anio_publicacion }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('nropaginas', 'Páginas:') !!}
-                        <p>{{ $libro->material->nropaginas }}</p>
+                        {!! Form::label('nro_paginas', 'Páginas:') !!}
+                        <p>{{ $libro->material->nro_paginas }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('forma', 'Forma:') !!}
@@ -63,16 +63,12 @@
                         <p>{{ $libro->material->idioma }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('urldescarga', 'Título:') !!}
-                        <p>{{ $libro->material->urldescarga }}</p>
+                        {!! Form::label('url', 'Título:') !!}
+                        <p>{{ $libro->material->url }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('osbervacion', 'Observación:') !!}
                         <p>{{ $libro->material->osbervacion }}</p>
-                    </div>
-                    <div class="form-group">
-                        {!! Form::label('estado', 'Estado:') !!}
-                        <p>{{ $libro->material->estado }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('condicion', 'Condición:') !!}
@@ -94,10 +90,7 @@
                         {!! Form::label('catalogo', 'Catálogo:') !!}
                         <p>{{ $libro->material->catalogo }}</p>
                     </div>
-                    <div class="form-group">
-                        {!! Form::label('ejemplares', 'Ejemplares:') !!}
-                        <p>{{ $libro->material->ejemplares }}</p>
-                    </div>
+                    
 
 
 

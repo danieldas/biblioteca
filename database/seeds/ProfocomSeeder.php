@@ -15,26 +15,26 @@ class ProfocomSeeder extends Seeder
         Profocom::create([
 
             'codigo' => '444',
-            'material_id' => '10',
+            'material_id' => '13',
 
         ]);
         Profocom::create([
 
             'codigo' => '555',
-            'material_id' => '11',
+            'material_id' => '14',
 
         ]);
         Profocom::create([
 
             'codigo' => '666',
-            'material_id' => '12',
+            'material_id' => '15',
 
         ]);
-//        Profocom::create([
-//
-//            'codigo' => '777',
-//            'material_id' => '12',
-//
-//        ]);
+        Profocom::create([
+
+            'codigo' => '777',
+            'material_id' => '16',
+
+        ]);
     }
 }

@@ -5,7 +5,6 @@
             <th>N°</th>
             <th>Título</th>
             <th>Año</th>
-            <th>Ejemplares</th>
             <th>Editorial</th>
             <th>Edicion</th>
             <th>Procedencia</th>
@@ -18,8 +17,7 @@
             <tr>
                 <td>{{$loop->iteration}}</td>
                 <td>{{ $libro->material->titulo }}</td>
-                <td>{{ $libro->material->aniopublic }}</td>
-                <td>{{ $libro->material->ejemplares }}</td>
+                <td>{{ $libro->material->anio_publicacion }}</td>
                 <td>{{ $libro->editorial }}</td>
                 <td>{{ $libro->edicion }}</td>
                 <td>{{ $libro->procedencia }}</td>

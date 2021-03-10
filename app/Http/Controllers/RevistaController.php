@@ -22,7 +22,7 @@ class RevistaController extends Controller
             where('editorial', 'like', $filtro)
             ->orWhereHas('material', function ($query) use ($filtro) {
                 $query->where('titulo', 'like', $filtro)
-                ->orWhere('aniopublic', 'like', $filtro);
+                ->orWhere('anio_publicacion', 'like', $filtro);
             })
             ->orderByDesc('created_at')
             ->paginate('50');

@@ -8,6 +8,7 @@ use App\Http\Requests\StoreMateria;
 use App\Models\Materia;
 use Illuminate\Http\Request;
 
+
 class MateriaController extends Controller
 {
     public function index(Request $request)

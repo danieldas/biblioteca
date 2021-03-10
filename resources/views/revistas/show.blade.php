@@ -39,12 +39,12 @@
                         <p>{{ $revista->material->titulo }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('aniopublic', 'Año:') !!}
-                        <p>{{ $revista->material->aniopublic }}</p>
+                        {!! Form::label('anio_publicacion', 'Año:') !!}
+                        <p>{{ $revista->material->anio_publicacion }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('nropaginas', 'Páginas:') !!}
-                        <p>{{ $revista->material->nropaginas }}</p>
+                        {!! Form::label('nro_paginas', 'Páginas:') !!}
+                        <p>{{ $revista->material->nro_paginas }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('forma', 'Forma:') !!}
@@ -59,16 +59,12 @@
                         <p>{{ $revista->material->idioma }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('urldescarga', 'Título:') !!}
-                        <p>{{ $revista->material->urldescarga }}</p>
+                        {!! Form::label('url', 'Título:') !!}
+                        <p>{{ $revista->material->url }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('osbervacion', 'Observación:') !!}
                         <p>{{ $revista->material->osbervacion }}</p>
-                    </div>
-                    <div class="form-group">
-                        {!! Form::label('estado', 'Estado:') !!}
-                        <p>{{ $revista->material->estado }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('condicion', 'Condición:') !!}
@@ -80,7 +76,11 @@
                     </div>
                     <div class="form-group">
                         {!! Form::label('disponibilidad', 'Disponibilidad:') !!}
-                        <p>{{ $revista->material->disponibilidad }}</p>
+                        @if($revista->material->disponibilidad)    
+                        <p> Disponible</p> 
+                        @else
+                        <p>No Disponible </p>
+                        @endif
                     </div>
                     <div class="form-group">
                         {!! Form::label('descripción', 'Descripción:') !!}
@@ -91,13 +91,14 @@
                         <p>{{ $revista->material->catalogo }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('ejemplares', 'Ejemplares:') !!}
-                        <p>{{ $revista->material->ejemplares }}</p>
-                    </div>
-                    <div class="form-group">
                         {!! Form::label('autores', 'Autores:') !!}
                         <p>{{ $revista->material->escritores }}</p>
                     </div>
+                    <div class="form-group">
+                        {!! Form::label('materias', 'Materias:') !!}
+                        <p>{{ $revista->material->asignaturas }}</p>
+                    </div>
+
 
 
 

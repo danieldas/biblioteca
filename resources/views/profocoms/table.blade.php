@@ -5,7 +5,6 @@
             <th>N°</th>
             <th>Título</th>
             <th>Año</th>
-            <th>Ejemplares</th>
             <th>Codigo</th>
             
         </tr>
@@ -15,8 +14,7 @@
             <tr>
                 <td>{{$loop->iteration}}</td>
                 <td>{{ $profocom->material->titulo }}</td>
-                <td>{{ $profocom->material->aniopublic }}</td>
-                <td>{{ $profocom->material->ejemplares }}</td>
+                <td>{{ $profocom->material->anio_publicacion }}</td>
                 <td>{{ $profocom->codigo }}</td>
             
                 <td>

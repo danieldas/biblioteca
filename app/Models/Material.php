@@ -14,26 +14,29 @@ class Material extends Model
 
     public $fillable = ['id',
         'titulo',
-        'aniopublic',
-        'nropaginas',
+        'anio_publicacion',
+        'nro_paginas',
         'forma',
         'tipo',
         'idioma',
-        'urldescarga',
+        'url',
         'observacion',
-        'estado',
         'condicion',
         'isbn',
         'disponibilidad',
         'descripcion',
-        'catalogo',
-        'ejemplares'
+        'catalogo'
     ];
 
     public function getEscritoresAttribute()
     {
         $controlador = new MaterialController();
         return $controlador->getAutores($this->id);
+    }
+    public function getAsignaturasAttribute()
+    {
+        $controlador = new MaterialController();
+        return $controlador->getMaterias($this->id);
     }
 
     public function libro()

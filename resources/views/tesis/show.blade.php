@@ -35,24 +35,16 @@
                         <p>{{ $tesis->revisor }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('nroejemplares', 'Nroejemplares:') !!}
-                        <p>{{ $tesis->nroejemplares }}</p>
-                    </div>
-                    <div class="form-group">
-                        {!! Form::label('disponibles', 'Disponibles:') !!}
-                        <p>{{ $tesis->disponibles }}</p>
-                    </div>
-                    <div class="form-group">
                         {!! Form::label('titulo', 'Título:') !!}
                         <p>{{ $tesis->material->titulo }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('aniopublic', 'Año:') !!}
-                        <p>{{ $tesis->material->aniopublic }}</p>
+                        {!! Form::label('anio_publicacion', 'Año:') !!}
+                        <p>{{ $tesis->material->anio_publicacion }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('nropaginas', 'Páginas:') !!}
-                        <p>{{ $tesis->material->nropaginas }}</p>
+                        {!! Form::label('nro_paginas', 'Páginas:') !!}
+                        <p>{{ $tesis->material->nro_paginas }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('forma', 'Forma:') !!}
@@ -67,16 +59,12 @@
                         <p>{{ $tesis->material->idioma }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('urldescarga', 'Título:') !!}
-                        <p>{{ $tesis->material->urldescarga }}</p>
+                        {!! Form::label('url', 'Título:') !!}
+                        <p>{{ $tesis->material->url }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('osbervacion', 'Observación:') !!}
                         <p>{{ $tesis->material->osbervacion }}</p>
-                    </div>
-                    <div class="form-group">
-                        {!! Form::label('estado', 'Estado:') !!}
-                        <p>{{ $tesis->material->estado }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('condicion', 'Condición:') !!}
@@ -98,13 +86,7 @@
                         {!! Form::label('catalogo', 'Catálogo:') !!}
                         <p>{{ $tesis->material->catalogo }}</p>
                     </div>
-                    <div class="form-group">
-                        {!! Form::label('ejemplares', 'Ejemplares:') !!}
-                        <p>{{ $tesis->material->ejemplares }}</p>
-                    </div>
-
-
-
+                
 
                     <a href="{{ route('tesis.index') }}" class="btn btn-default">Volver</a>
                 </div>

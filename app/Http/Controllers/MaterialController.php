@@ -8,6 +8,7 @@ use App\Http\Requests\StoreMaterial;
 use App\Models\Autor;
 use App\Models\Libro;
 use App\Models\Material;
+use App\Models\Materia;
 use Illuminate\Http\Request;
 use DB;
 
@@ -77,10 +78,25 @@ class MaterialController extends Controller
             ->groupBy('material_id')
             ->first();
 
-        if(empty($autores))
+        if(empty($materias))
            return '';
         else
-            return $autores->nombres;
+            return $materias->nombres;
+    }
+    public function getMaterias($material_id)
+    {
+        $materias=
+            Materia::
+            join('materia_material', 'materia_material.materia_id', '=', 'materia.id')
+            ->select(DB::raw("GROUP_CONCAT(materia.nombre SEPARATOR ', ') as nombres"))
+            ->where('material_id', $material_id)
+            ->groupBy('material_id')
+            ->first();
+
+        if(empty($materias))
+           return '';
+        else
+            return $materias->nombres;
     }
 }
 

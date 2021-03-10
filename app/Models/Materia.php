@@ -16,4 +16,6 @@ class Materia extends Model
         'sigla',
         'alta'
     ];
+
+   
 }

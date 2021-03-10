@@ -15,8 +15,6 @@ class Tesis extends Model
         'categoria',
         'tutor',
         'revisor',
-        'nroejemplares',
-        'disponibles',
         'material_id',
         'carrera_id'
     ];

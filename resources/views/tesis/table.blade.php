@@ -5,12 +5,9 @@
             <th>N°</th>
             <th>Título</th>
             <th>Año</th>
-            <th>Ejemplares</th>
             <th>Categoria</th>
             <th>Tutor</th>
             <th>Revisor</th>
-            <th>Nroejemplares</th>
-            <th>Disponibles</th>
 
         </tr>
         </thead>
@@ -19,13 +16,10 @@
             <tr>
                 <td>{{$loop->iteration}}</td>
                 <td>{{ $tesis->material->titulo }}</td>
-                <td>{{ $tesis->material->aniopublic }}</td>
-                <td>{{ $tesis->material->ejemplares }}</td>
+                <td>{{ $tesis->material->anio_publicacion }}</td>
                 <td>{{ $tesis->categoria }}</td>
                 <td>{{ $tesis->tutor }}</td>
                 <td>{{ $tesis->revisor }}</td>
-                <td>{{ $tesis->nroejemplares }}</td>
-                <td>{{ $tesis->disponibles }}</td>
             
                 <td>
                     <div class='btn-group'>

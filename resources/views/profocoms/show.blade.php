@@ -31,12 +31,12 @@
                         <p>{{ $profocom->material->titulo }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('aniopublic', 'Año:') !!}
-                        <p>{{ $profocom->material->aniopublic }}</p>
+                        {!! Form::label('anio_publicacion', 'Año:') !!}
+                        <p>{{ $profocom->material->anio_opublicacion }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('nropaginas', 'Páginas:') !!}
-                        <p>{{ $profocom->material->nropaginas }}</p>
+                        {!! Form::label('nro_paginas', 'Páginas:') !!}
+                        <p>{{ $profocom->material->nro_paginas }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('forma', 'Forma:') !!}
@@ -51,16 +51,12 @@
                         <p>{{ $profocom->material->idioma }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('urldescarga', 'Título:') !!}
-                        <p>{{ $profocom->material->urldescarga }}</p>
+                        {!! Form::label('url', 'Título:') !!}
+                        <p>{{ $profocom->material->url }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('osbervacion', 'Observación:') !!}
                         <p>{{ $profocom->material->osbervacion }}</p>
-                    </div>
-                    <div class="form-group">
-                        {!! Form::label('estado', 'Estado:') !!}
-                        <p>{{ $profocom->material->estado }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('condicion', 'Condición:') !!}
@@ -82,12 +78,7 @@
                         {!! Form::label('catalogo', 'Catálogo:') !!}
                         <p>{{ $profocom->material->catalogo }}</p>
                     </div>
-                    <div class="form-group">
-                        {!! Form::label('ejemplares', 'Ejemplares:') !!}
-                        <p>{{ $profocom->material->ejemplares }}</p>
-                    </div>
-
-
+                    
 
 
                     <a href="{{ route('profocoms.index') }}" class="btn btn-default">Volver</a>

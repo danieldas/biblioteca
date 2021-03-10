@@ -37,7 +37,7 @@ class Material extends Migration
                 'Malo'
             ])->default('Bueno');
             $table->string('isbn', 20);
-            $table->string('disponibilidad')->default(true);
+            $table->boolean('disponibilidad')->default(true);
             $table->string('descripcion', 200)->nullable();
             $table->string('catalogo', 30)->nullable();
 

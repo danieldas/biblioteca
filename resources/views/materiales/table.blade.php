@@ -4,8 +4,8 @@
         <tr>
             <th>N°</th>
             <th>Nombre</th>
-            <th>Aniopublic</th>
-            <th>Edicion</th>
+            <th>Año</th>
+            
             <th></th>
         </tr>
         </thead>
@@ -14,8 +14,8 @@
             <tr>
                 <td>{{$loop->iteration}}</td>
                 <td>{{ $material->titulo }}</td>
-{{--                <td>{{ $material->aniopublic}}</td>--}}
-{{--                <td>{{ $material->edicion}}</td>--}}
+                <td>{{ $material->anio_publicacion}}</td>--}}
+
                 <td>
                     <div class='btn-group'>
 

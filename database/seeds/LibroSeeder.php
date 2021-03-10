@@ -16,7 +16,7 @@ class LibroSeeder extends Seeder
 
             'editorial' => 'kipus',
             'edicion' => 'primera',
-            'procedencia' => 'donado',
+            'procedencia' => 'compra',
             'material_id' => '1',
             'costo' => '200',
 
@@ -24,8 +24,8 @@ class LibroSeeder extends Seeder
         Libro::create([
 
             'editorial' => 'Plural',
-            'edicion' => 'primera',
-            'procedencia' => 'donado',
+            'edicion' => 'Primera',
+            'procedencia' => 'Donación',
             'material_id' => '2',
             'costo' => '150',
 
@@ -33,20 +33,20 @@ class LibroSeeder extends Seeder
         Libro::create([
 
             'editorial' => 'Santillana',
-            'edicion' => 'primera',
-            'procedencia' => 'donado',
+            'edicion' => 'Primera',
+            'procedencia' => 'Compra',
             'material_id' => '3',
             'costo' => '200',
 
         ]);
-//        Libro::create([
-//
-//            'editorial' => 'kipus',
-//            'edicion' => 'segunada',
-//            'procedencia' => 'nuevo',
-//            'material_id' => '4',
-//            'costo' => '100',
-//
-//        ]);
+       Libro::create([
+
+            'editorial' => 'kipus',
+            'edicion' => 'Segunda',
+            'procedencia' => 'Donación',
+            'material_id' => '4',
+            'costo' => '100',
+
+        ]);
     }
 }

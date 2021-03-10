@@ -14,35 +14,35 @@ class RevistaSeeder extends Seeder
     {
        Revista::create([
 
-            'edicion' => 'primera',
+            'edicion' => 'Primera',
             'editorial' => 'Kipus',
-            'material_id' => '7',
-            'procedencia' => 'donado'
+            'material_id' => '9',
+            'procedencia' => 'Compra'
 
         ]);
        Revista::create([
 
             'edicion' => 'Primera',
             'editorial' => 'Plural',
-            'material_id' => '8',
-            'procedencia' => 'Donado'
+            'material_id' => '10',
+            'procedencia' => 'Compra'
 
         ]);
        Revista::create([
 
             'edicion' => 'Santillana',
-            'editorial' => 'primera',
-            'material_id' => '9',
-            'procedencia' => 'donado'
+            'editorial' => 'Primera',
+            'material_id' => '11',
+            'procedencia' => 'Compra'
 
         ]);
-//        Revista::create([
-//
-//            'edicion' => 'Kipus',
-//            'editorial' => 'segunda',
-//            'material_id' => '12',
-//            'procedencia' => 'nuevo'
-//
-//        ]);
+        Revista::create([
+
+            'edicion' => 'Primera',
+            'editorial' => 'Kipus',
+            'material_id' => '12',
+            'procedencia' => 'Compra'
+
+        ]);
     }
 }

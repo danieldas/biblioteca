@@ -35,7 +35,7 @@
                         {!! Form::label('sigla', 'Sigla:') !!}
                         <p>{{ $materia->alta}}</p>
                     </div>
-
+                    
 
 
                     <a href="{{ route('materias.index') }}" class="btn btn-default">Volver</a>

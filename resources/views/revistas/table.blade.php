@@ -5,10 +5,10 @@
             <th>N°</th>
             <th>Título</th>
             <th>Año</th>
-            <th>Ejemplares</th>
             <th>Edición</th>
             <th>Editorial</th>
             <th>Autores</th>
+            <th>Materias</th>
         </tr>
         </thead>
         <tbody>
@@ -16,11 +16,11 @@
             <tr>
                 <td>{{$loop->iteration}}</td>
                 <td>{{ $revista->material->titulo }}</td>
-                <td>{{ $revista->material->aniopublic }}</td>
-                <td>{{ $revista->material->ejemplares }}</td>
+                <td>{{ $revista->material->anio_publicacion }}</td>
                 <td>{{ $revista->edicion }}</td>
                 <td>{{ $revista->editorial }}</td>
                 <td>{{ $revista->material->escritores }}</td>
+                <td>{{ $revista->material->asignaturas }}</td>
                 <td>
                     <div class='btn-group'>
 

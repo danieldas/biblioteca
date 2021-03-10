@@ -14,44 +14,36 @@ class TesisSeeder extends Seeder
     {
         Tesis::create([
 
-            'categoria' => 'primera',
+            'categoria' => 'proyecto de grado',
             'tutor' => 'juan',
             'revisor' => 'pedro',
-            'nroejemplares' => '2',
-            'disponibles' => '8',
-            'material_id' => '4',
+            'material_id' => '5',
             'carrera_id' => '1'
         ]);
         Tesis::create([
 
-            'categoria' => 'primera',
+            'categoria' => 'proyecto de grado',
             'tutor' => 'juan',
             'revisor' => 'julio',
-            'nroejemplares' => '3',
-            'disponibles' => '8',
-            'material_id' => '5',
+            'material_id' => '6',
             'carrera_id' => '2'
         ]);
         Tesis::create([
 
-            'categoria' => 'primera',
+            'categoria' => 'proyecto de grado',
             'tutor' => 'cesar',
             'revisor' => 'julio',
-            'nroejemplares' => '2',
-            'disponibles' => '8',
-            'material_id' => '6',
+            'material_id' => '7',
             'carrera_id' => '3'
         ]);
-//        Tesis::create([
-//
-//            'categoria' => 'segunda',
-//            'tutor' => 'maria',
-//            'revisor' => 'soledad',
-//            'nroejemplares' => '3',
-//            'disponibles' => '6',
-//            'material_id' => '8',
-//            'carrera_id' => '3'
-//        ]);
+        Tesis::create([
+
+            'categoria' => 'proyecto de grado',
+            'tutor' => 'maria',
+            'revisor' => 'soledad',
+            'material_id' => '8',
+            'carrera_id' => '4'
+        ]);
     }
 }
 

@@ -15,7 +15,7 @@ class UsuarioSeeder extends Seeder
         Usuario::create([
             'cuenta' => 'admin',
             'password' => '123456',
-            'rol' => 'Administrador',
+            'rol' => 'Funcionario',
             'nombre' => 'Jose',
             'apellido' => 'Lopez',
             'ci' => '7282418',
