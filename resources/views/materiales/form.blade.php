@@ -191,3 +191,20 @@
     </div>
     <br><br>
 </div>
+
+@if($errors->has('autor_id'))
+    <div class="form-group has-error">
+        <div class="help-block">
+            <label class="alert-danger">{{ $errors->first('autor_id') }}</label>
+        </div>
+    </div>
+@endif
+<div class="form-group">
+    <div class="col-lg-2">
+        {!! Form::label('Autor', 'Autor *:', ['class' => 'control-label']) !!}
+    </div>
+    <div class="col-lg-8">
+        {!! Form::select('autor_id', \App\Patrones\Fachada::getAutores(), null, ['class' => 'form-control', 'required']) !!}
+    </div>
+    <br><br>
+</div>

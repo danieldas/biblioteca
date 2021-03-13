@@ -34,7 +34,7 @@ class RevistaController extends Controller
         return view('revistas.create');
     }
 
-    public function store(StoreRevista $request)
+    public function store(Request $request)
     {
         $valores = $request->all();
 

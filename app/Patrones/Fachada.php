@@ -3,6 +3,8 @@
 
 namespace App\Patrones;
 
+use App\Models\Autor;
+
 class Fachada
 {
     public static function usuarioEstados()
@@ -62,5 +64,10 @@ class Fachada
             'Trabajo dirigido' => 'Trabajo dirigido',
         ];
     }
-    
+    public static function getAutores()
+    {
+        $autores= Autor::where('alta', true)->get()->pluck('nombre', 'id')->toArray();
+        return $autores;
+    }
+
 }
