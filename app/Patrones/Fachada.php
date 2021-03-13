@@ -54,4 +54,13 @@ class Fachada
             'Donación' => 'Donación',
         ];
     }
+    public static function getCategorias()
+    {
+        return [
+            'Proyecto de grado' => 'Proyecto de grado',
+            'Tesis de grado' => 'Tesis de grado',
+            'Trabajo dirigido' => 'Trabajo dirigido',
+        ];
+    }
+    
 }

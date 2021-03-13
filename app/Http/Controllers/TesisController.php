@@ -28,6 +28,11 @@ class TesisController extends Controller
         return view('tesis.index', compact('tesis'));
     }
 
+    public function create()
+    {
+        return view('tesis.create');
+    }
+
     public function show($id)
     {
         $tesis = Tesis::findOrFail($id);

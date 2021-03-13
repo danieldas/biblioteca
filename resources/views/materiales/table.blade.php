@@ -14,7 +14,7 @@
             <tr>
                 <td>{{$loop->iteration}}</td>
                 <td>{{ $material->titulo }}</td>
-                <td>{{ $material->anio_publicacion}}</td>--}}
+                <td>{{ $material->anio_publicacion}}</td>
 
                 <td>
                     <div class='btn-group'>

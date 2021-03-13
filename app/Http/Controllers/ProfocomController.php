@@ -28,6 +28,11 @@ class ProfocomController extends Controller
         return view('profocoms.index', compact('profocoms'));
     }
 
+    public function create()
+    {
+        return view('profocoms.create');
+    }
+
     public function show($id)
     {
         $profocom = Profocom::findOrFail($id);

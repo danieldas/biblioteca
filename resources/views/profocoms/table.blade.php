@@ -6,6 +6,8 @@
             <th>Título</th>
             <th>Año</th>
             <th>Codigo</th>
+            <th>Autores</th>
+            <th>Materias</th>
             
         </tr>
         </thead>
@@ -16,6 +18,8 @@
                 <td>{{ $profocom->material->titulo }}</td>
                 <td>{{ $profocom->material->anio_publicacion }}</td>
                 <td>{{ $profocom->codigo }}</td>
+                <td>{{ $profocom->material->escritores }}</td>
+                <td>{{ $profocom->material->asignaturas }}</td>
             
                 <td>
                     <div class='btn-group'>

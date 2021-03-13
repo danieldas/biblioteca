@@ -27,15 +27,15 @@
                         <p>{{ $material->titulo }}</p>
                     </div>
 
-{{--                    <div class="form-group">--}}
-{{--                        {!! Form::label('editorial', 'Editorial:') !!}--}}
-{{--                        <p>{{ $material->editorial }}</p>--}}
-{{--                    </div>--}}
+                    <div class="form-group">
+                        {!! Form::label('editorial', 'Editorial:') !!}
+                        <p>{{ $material->editorial }}</p>
+                    </div>
 
-{{--                    <div class="form-group">--}}
-{{--                        {!! Form::label('edicion', 'Edicion:') !!}--}}
-{{--                        <p>{{ $material->edicion }}</p>--}}
-{{--                    </div>--}}
+                    <div class="form-group">
+                        {!! Form::label('edicion', 'Edicion:') !!}
+                       <p>{{ $material->edicion }}</p>
+                    </div>
 
 
 

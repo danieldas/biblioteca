@@ -9,6 +9,9 @@
             <th>Edicion</th>
             <th>Procedencia</th>
             <th>Costo</th>
+            <th>Autores</th>
+            <th>Materias</th>
+            
 
         </tr>
         </thead>
@@ -22,6 +25,8 @@
                 <td>{{ $libro->edicion }}</td>
                 <td>{{ $libro->procedencia }}</td>
                 <td>{{ $libro->costo }}</td>
+                <td>{{ $libro->material->escritores }}</td>
+                <td>{{ $libro->material->asignaturas }}</td>
             
                 <td>
                     <div class='btn-group'>

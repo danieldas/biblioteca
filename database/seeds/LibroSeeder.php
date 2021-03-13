@@ -15,8 +15,8 @@ class LibroSeeder extends Seeder
         Libro::create([
 
             'editorial' => 'kipus',
-            'edicion' => 'primera',
-            'procedencia' => 'compra',
+            'edicion' => 'Primera',
+            'procedencia' => 'Compra',
             'material_id' => '1',
             'costo' => '200',
 

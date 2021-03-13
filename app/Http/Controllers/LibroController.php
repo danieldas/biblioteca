@@ -28,6 +28,11 @@ class LibroController extends Controller
         return view('libros.index', compact('libros'));
     }
 
+    public function create()
+    {
+        return view('libros.create');
+    }
+
     public function show($id)
     {
         $libro = Libro::findOrFail($id);

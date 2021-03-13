@@ -8,6 +8,8 @@
             <th>Categoria</th>
             <th>Tutor</th>
             <th>Revisor</th>
+            <th>Autores</th>
+            <th>Materias</th>
 
         </tr>
         </thead>
@@ -20,7 +22,8 @@
                 <td>{{ $tesis->categoria }}</td>
                 <td>{{ $tesis->tutor }}</td>
                 <td>{{ $tesis->revisor }}</td>
-            
+                <td>{{ $tesis->material->escritores }}</td>
+                <td>{{ $tesis->material->asignaturas }}</td>
                 <td>
                     <div class='btn-group'>
 

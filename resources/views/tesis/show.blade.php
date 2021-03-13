@@ -76,7 +76,11 @@
                     </div>
                     <div class="form-group">
                         {!! Form::label('disponibilidad', 'Disponibilidad:') !!}
-                        <p>{{ $tesis->material->disponibilidad }}</p>
+                        @if($tesis->material->disponibilidad)    
+                        <p> Disponible</p> 
+                        @else
+                        <p>No Disponible </p>
+                        @endif
                     </div>
                     <div class="form-group">
                         {!! Form::label('descripción', 'Descripción:') !!}
@@ -85,6 +89,14 @@
                     <div class="form-group">
                         {!! Form::label('catalogo', 'Catálogo:') !!}
                         <p>{{ $tesis->material->catalogo }}</p>
+                    </div>
+                    <div class="form-group">
+                        {!! Form::label('autores', 'Autores:') !!}
+                        <p>{{ $tesis->material->escritores }}</p>
+                    </div>
+                    <div class="form-group">
+                        {!! Form::label('materias', 'Materias:') !!}
+                        <p>{{ $tesis->material->asignaturas }}</p>
                     </div>
                 
 

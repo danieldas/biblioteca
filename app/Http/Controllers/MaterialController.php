@@ -98,5 +98,6 @@ class MaterialController extends Controller
         else
             return $materias->nombres;
     }
+    
 }
 

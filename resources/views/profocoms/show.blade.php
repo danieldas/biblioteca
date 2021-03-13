@@ -68,7 +68,11 @@
                     </div>
                     <div class="form-group">
                         {!! Form::label('disponibilidad', 'Disponibilidad:') !!}
-                        <p>{{ $profocom->material->disponibilidad }}</p>
+                        @if($profocom->material->disponibilidad)    
+                        <p> Disponible</p> 
+                        @else
+                        <p>No Disponible </p>
+                        @endif
                     </div>
                     <div class="form-group">
                         {!! Form::label('descripción', 'Descripción:') !!}
@@ -77,6 +81,14 @@
                     <div class="form-group">
                         {!! Form::label('catalogo', 'Catálogo:') !!}
                         <p>{{ $profocom->material->catalogo }}</p>
+                    </div>
+                    <div class="form-group">
+                        {!! Form::label('autores', 'Autores:') !!}
+                        <p>{{ $profocom->material->escritores }}</p>
+                    </div>
+                    <div class="form-group">
+                        {!! Form::label('materias', 'Materias:') !!}
+                        <p>{{ $profocom->material->asignaturas }}</p>
                     </div>
                     
 

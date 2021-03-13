@@ -14,33 +14,33 @@ class TesisSeeder extends Seeder
     {
         Tesis::create([
 
-            'categoria' => 'proyecto de grado',
-            'tutor' => 'juan',
-            'revisor' => 'pedro',
+            'categoria' => 'Proyecto de grado',
+            'tutor' => 'Juan',
+            'revisor' => 'Pedro',
             'material_id' => '5',
             'carrera_id' => '1'
         ]);
         Tesis::create([
 
-            'categoria' => 'proyecto de grado',
-            'tutor' => 'juan',
-            'revisor' => 'julio',
+            'categoria' => 'Proyecto de grado',
+            'tutor' => 'Juan',
+            'revisor' => 'Julio',
             'material_id' => '6',
             'carrera_id' => '2'
         ]);
         Tesis::create([
 
-            'categoria' => 'proyecto de grado',
-            'tutor' => 'cesar',
-            'revisor' => 'julio',
+            'categoria' => 'Proyecto de grado',
+            'tutor' => 'Cesar',
+            'revisor' => 'Julio',
             'material_id' => '7',
             'carrera_id' => '3'
         ]);
         Tesis::create([
 
-            'categoria' => 'proyecto de grado',
-            'tutor' => 'maria',
-            'revisor' => 'soledad',
+            'categoria' => 'Proyecto de grado',
+            'tutor' => 'Maria',
+            'revisor' => 'Soledad',
             'material_id' => '8',
             'carrera_id' => '4'
         ]);

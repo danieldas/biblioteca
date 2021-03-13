@@ -45,7 +45,7 @@ class MateriaSeeder extends Seeder
 
         Materia::create([
 
-            'nombre' => 'lenguaje',
+            'nombre' => 'Lenguaje',
             'sigla' => 'RRR333'
         ]);
 
