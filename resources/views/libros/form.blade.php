@@ -49,19 +49,19 @@
     <br><br>
 </div>
 
-@if($errors->has('compra'))
+@if($errors->has('costo'))
     <div class="form-group has-error">
         <div class="help-block">
-            <label class="alert-danger">{{ $errors->first('compra') }}</label>
+            <label class="alert-danger">{{ $errors->first('costo') }}</label>
         </div>
     </div>
 @endif
 <div class="form-group">
     <div class="col-lg-2">
-        {!! Form::label('Compra', 'Compra *:', ['class' => 'control-label']) !!}
+        {!! Form::label('Costo', 'Costo *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
-        {!! Form::number('compra', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::number('costo', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>
