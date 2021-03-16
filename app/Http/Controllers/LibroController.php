@@ -33,6 +33,18 @@ class LibroController extends Controller
         return view('libros.create');
     }
 
+    public function store(Request $request)
+    {
+        $valores = $request->all();
+
+        $material=Material::create($valores);
+        $valores['material_id']= $material->id;
+        $libro = Libro::create($valores);
+        return redirect()
+            ->route('libros.show', ['libro' => $libro->id])
+            ->with('mensaje', 'El libro se ha creado con éxito');
+    }
+
     public function show($id)
     {
         $libro = Libro::findOrFail($id);

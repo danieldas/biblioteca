@@ -2,7 +2,7 @@
 
 
 namespace App\Patrones;
-
+use App\Models\Materia;
 use App\Models\Autor;
 
 class Fachada
@@ -68,6 +68,12 @@ class Fachada
     {
         $autores= Autor::where('alta', true)->get()->pluck('nombre', 'id')->toArray();
         return $autores;
+    }
+
+    public static function getMaterias()
+    {
+        $materias= Materia::where('alta', true)->get()->pluck('nombre', 'id')->toArray();
+        return $materias;
     }
 
 }
