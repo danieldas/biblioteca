@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\StoreRevista;
-use App\Models\Autor;
 use App\Models\Material;
 use App\Models\Revista;
 use Illuminate\Http\Request;
@@ -54,7 +53,10 @@ class RevistaController extends Controller
 
     public function edit($id)
     {
-        $revista = Revista::findOrFail($id);
+        $revista = Material::
+        join('revista', 'revista.material_id', '=', 'material.id')
+            ->where('revista.id', $id)
+            ->first();
         return view('revistas.edit', compact('revista'));
     }
 
