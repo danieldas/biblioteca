@@ -41,7 +41,7 @@ class RevistaController extends Controller
         $valores['material_id']= $material->id;
         $revista = Revista::create($valores);
         return redirect()
-            ->route('revistas.show', ['revista' => $revista->id])
+            ->route('revistas.edit', ['revista' => $revista->id])
             ->with('mensaje', 'La revista se ha creado con éxito');
     }
 

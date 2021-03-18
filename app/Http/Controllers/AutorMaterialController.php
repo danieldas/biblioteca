@@ -13,23 +13,38 @@ class AutorMaterialController
 {
     public function index(Request $request)
     {
+        $autores = $this->getAutores($request->material_id);
 
-        $autores = Autor::
-        join('autor_material', 'autor_material.autor_id', '=', 'autor.id')
-            ->where('material_id', $request->material_id)
-            ->get();
         return $autores;
     }
+
     public function store(Request $request)
     {
         $valores = $request->all();
         AutorMaterial::create($valores);
 
+        $autores = $this->getAutores($request->material_id);
+
+        return response()->json(['res' => true, 'autores' => $autores, 'message' => 'Autor registrado correctamente']);
+    }
+
+    public function destroy($id)
+    {
+        $autorMaterial = AutorMaterial::find($id);
+        $autorMaterial->delete($id);
+
+        $autores = $this->getAutores($autorMaterial->material_id);
+
+        return response()->json(['res' => true, 'autores' => $autores, 'message' => 'Autor eliminado correctamente']);
+    }
+
+    private function getAutores($material_id)
+    {
         $autores = Autor::
             join('autor_material', 'autor_material.autor_id', '=', 'autor.id')
-            ->where('material_id', $request->material_id)
+            ->select('autor_material.id', 'autor.nombre')
+            ->where('material_id', $material_id)
             ->get();
-        return response()->json(['res' => true, 'autores' => $autores, 'message' => 'Autor registrado correctamente']);
-
+        return $autores;
     }
 }

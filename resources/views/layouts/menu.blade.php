@@ -12,10 +12,6 @@
 </li>
 
 <li >
-    <a href="{{ route('materiales.index') }}"><i class="fa fa-list"></i><span>Materiales</span></a>
-</li>
-
-<li >
     <a href="{{ route('carreras.index') }}"><i class="fa fa-list"></i><span>Carreras</span></a>
 </li>
 
