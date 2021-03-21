@@ -67,8 +67,8 @@
                         <p>{{ $libro->material->url }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('osbervacion', 'Observación:') !!}
-                        <p>{{ $libro->material->osbervacion }}</p>
+                        {!! Form::label('observacion', 'Observación:') !!}
+                        <p>{{ $libro->material->observacion }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('condicion', 'Condición:') !!}
@@ -88,7 +88,7 @@
                     </div>
                     <div class="form-group">
                         {!! Form::label('descripción', 'Descripción:') !!}
-                        <p>{{ $libro->material->descripción }}</p>
+                        <p>{{ $libro->material->descripcion }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('catalogo', 'Catálogo:') !!}

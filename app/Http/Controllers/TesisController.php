@@ -33,6 +33,17 @@ class TesisController extends Controller
         return view('tesis.create');
     }
 
+    public function store(Request $request)
+    {
+        $valores = $request->all();
+
+        $material=Material::create($valores);
+        $valores['material_id']= $material->id;
+        $tesis = Tesis::create($valores);
+        return redirect()
+            ->route('tesis.show', ['tesi' => $tesis->id])
+            ->with('mensaje', 'La tesis se ha creado con éxito');
+    }
     public function show($id)
     {
         $tesis = Tesis::findOrFail($id);

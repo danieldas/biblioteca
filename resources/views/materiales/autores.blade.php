@@ -17,7 +17,7 @@
         </div>
         <div class="col-lg-2">
             <a title="Agregar" @click="guardarAutor()"
-               class='btn btn-primary  pull-right'>Guardar <i
+               class='btn btn-primary  pull-right'>Agregar <i
                     class="glyphicon glyphicon-plus"></i></a>
         </div>
         <br><br>
@@ -65,7 +65,6 @@
                     axios.post("/autorMaterials", {
                         autor_id: this.autor_id,
                         material_id: "{{$revista->material_id}}",
-                        {{--formulario_liquidacion_id: "{{ $formularioLiquidacion->id }}"--}}
                     }).then(response => {
                         if (response.data.res) {
                             toastr.success(response.data.message);

@@ -63,8 +63,8 @@
                         <p>{{ $tesis->material->url }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('osbervacion', 'Observación:') !!}
-                        <p>{{ $tesis->material->osbervacion }}</p>
+                        {!! Form::label('observacion', 'Observación:') !!}
+                        <p>{{ $tesis->material->observacion }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('condicion', 'Condición:') !!}

@@ -49,3 +49,20 @@
     <br><br>
 </div>
 
+@if($errors->has('carrera_id'))
+    <div class="form-group has-error">
+        <div class="help-block">
+            <label class="alert-danger">{{ $errors->first('carrera_id') }}</label>
+        </div>
+    </div>
+@endif
+<div class="form-group">
+    <div class="col-lg-2">
+        {!! Form::label('Carrera', 'Carrera *:', ['class' => 'control-label']) !!}
+    </div>
+    <div class="col-lg-8">
+    {!! Form::select('carrera_id', \App\Patrones\Fachada::getCarreras(), null, ['class' => 'form-control', 'required']) !!}
+    </div>
+    <br><br>
+</div>
+
