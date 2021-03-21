@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\StoreRevista;
-use App\Models\Autor;
 use App\Models\Material;
 use App\Models\Revista;
 use Illuminate\Http\Request;
@@ -42,7 +41,7 @@ class RevistaController extends Controller
         $valores['material_id']= $material->id;
         $revista = Revista::create($valores);
         return redirect()
-            ->route('revistas.show', ['revista' => $revista->id])
+            ->route('revistas.edit', ['revista' => $revista->id])
             ->with('mensaje', 'La revista se ha creado con éxito');
     }
 
@@ -54,7 +53,10 @@ class RevistaController extends Controller
 
     public function edit($id)
     {
-        $revista = Revista::findOrFail($id);
+        $revista = Material::
+        join('revista', 'revista.material_id', '=', 'material.id')
+            ->where('revista.id', $id)
+            ->first();
         return view('revistas.edit', compact('revista'));
     }
 

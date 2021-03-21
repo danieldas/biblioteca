@@ -27,8 +27,8 @@
                         <a href="{{ route('revistas.show', [$revista->id]) }}" class='btn btn-default btn-xs'><i
                                 class="glyphicon glyphicon-eye-open" title="Detalle"></i> </a>
 
-{{--                            <a href="{{ route('autores.edit', [$autor->id]) }}" class='btn btn-warning btn-xs'><i--}}
-{{--                                    class="glyphicon glyphicon-edit" title="Editar"></i></a>--}}
+                            <a href="{{ route('revistas.edit', [$revista->id]) }}" class='btn btn-warning btn-xs'><i
+                                    class="glyphicon glyphicon-edit" title="Editar"></i></a>
 
 
                     </div>
