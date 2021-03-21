@@ -4,6 +4,7 @@
 namespace App\Patrones;
 use App\Models\Materia;
 use App\Models\Autor;
+use App\Models\Carrera;
 
 class Fachada
 {
@@ -76,4 +77,9 @@ class Fachada
         return $materias;
     }
 
+    public static function getCarreras()
+    {
+        $carreras= Carrera::where('alta', true)->get()->pluck('nombre', 'id')->toArray();
+        return $carreras;
+    }
 }

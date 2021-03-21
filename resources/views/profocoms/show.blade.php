@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-group">
                         {!! Form::label('anio_publicacion', 'Año:') !!}
-                        <p>{{ $profocom->material->anio_opublicacion }}</p>
+                        <p>{{ $profocom->material->anio_publicacion }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('nro_paginas', 'Páginas:') !!}
@@ -55,8 +55,8 @@
                         <p>{{ $profocom->material->url }}</p>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('osbervacion', 'Observación:') !!}
-                        <p>{{ $profocom->material->osbervacion }}</p>
+                        {!! Form::label('observacion', 'Observación:') !!}
+                        <p>{{ $profocom->material->observacion }}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('condicion', 'Condición:') !!}
@@ -76,7 +76,7 @@
                     </div>
                     <div class="form-group">
                         {!! Form::label('descripción', 'Descripción:') !!}
-                        <p>{{ $profocom->material->descripción }}</p>
+                        <p>{{ $profocom->material->descripcion}}</p>
                     </div>
                     <div class="form-group">
                         {!! Form::label('catalogo', 'Catálogo:') !!}

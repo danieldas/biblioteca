@@ -41,7 +41,7 @@ class TesisController extends Controller
         $valores['material_id']= $material->id;
         $tesis = Tesis::create($valores);
         return redirect()
-            ->route('tesis.show', ['tesis' => $tesis->id])
+            ->route('tesis.show', ['tesi' => $tesis->id])
             ->with('mensaje', 'La tesis se ha creado con éxito');
     }
     public function show($id)
