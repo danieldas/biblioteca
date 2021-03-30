@@ -18,6 +18,11 @@ class Docente extends Migration
             $table->increments('id');
             $table->string('lugar_trabajo', 100);
             $table->unsignedInteger('lector_id');
+            $table->foreign('lector_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('lector');
 
 
             $table->timestamps();

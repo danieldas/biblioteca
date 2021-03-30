@@ -1,43 +1,45 @@
-<div id="appAutores">
+<div id="appMaterias">
     <hr>
-    @if($errors->has('autor_id'))
+    @if($errors->has('materia_id'))
         <div class="form-group has-error">
             <div class="help-block">
-                <label class="alert-danger">{{ $errors->first('autor_id') }}</label>
+                <label class="alert-danger">{{ $errors->first('materia_id') }}</label>
             </div>
         </div>
     @endif
 
     <div class="form-group">
         <div class="col-lg-2">
-            {!! Form::label('Autor', 'Autor *:', ['class' => 'control-label']) !!}
+            {!! Form::label('Materia', 'Materia *:', ['class' => 'control-label']) !!}
         </div>
         <div class="col-lg-6">
-            {!! Form::select('autor_id', \App\Patrones\Fachada::getAutores(), null, ['class' => 'form-control', 'required', 'v-model' => 'autor_id']) !!}
+            {!! Form::select('materia_id', \App\Patrones\Fachada::getMaterias(), null, ['class' => 'form-control', 'required', 'v-model' => 'materia_id']) !!}
         </div>
         <div class="col-lg-2">
-            <a title="Agregar" @click="guardarAutor()"
+            <a title="Agregar" @click="guardarMateria()"
                class='btn btn-primary  pull-right'>Agregar <i
                     class="glyphicon glyphicon-plus"></i></a>
         </div>
         <br><br>
     </div>
-    <h3 style="text-align: center">AUTORES</h3>
+    <h3 style="text-align: center">MATERIAS</h3>
     <div class="table-responsive" style="padding-left: 20%; padding-right: 20%">
-        <table class="table" id="autores-table">
+        <table class="table" id="materias-table">
             <thead class="thead-dark">
             <tr>
                 <th>#</th>
                 <th>Nombre</th>
+                <th>Sigla</th>
                 <th></th>
             </tr>
             </thead>
             <tbody>
-            <tr v-for="(row, index) in autores" :key="index">
+            <tr v-for="(row, index) in materias" :key="index">
                 <td>@{{ index + 1 }}</td>
                 <td>@{{ row.nombre }}</td>
+                <td>@{{ row.sigla }}</td>
                 <td >
-                    <button type="button" title="Eliminar" @click="eliminarAutor(row.id)" class="btn btn-danger btn-xs">
+                    <button type="button" title="Eliminar" @click="eliminarMateria(row.id)" class="btn btn-danger btn-xs">
                         <i class="glyphicon glyphicon-trash"></i>
                     </button>
                 </td>
@@ -52,44 +54,44 @@
 @push('scripts')
     <script type="text/javascript">
         appFormulario = new Vue({
-            el: "#appAutores",
+            el: "#appMaterias",
             data: {
-                autor_id:'',
-                autores: [],
+                materia_id:'',
+                materias: [],
             },
             mounted(){
-                this.getAutores();
+                this.getMaterias();
             },
             methods: {
-                guardarAutor() {
-                    axios.post("/autorMaterials", {
-                        autor_id: this.autor_id,
+                guardarMateria() {
+                    axios.post("/materiaMaterials", {
+                        materia_id: this.materia_id,
                         material_id: "{{$revista->material_id}}",
                     }).then(response => {
                         if (response.data.res) {
                             toastr.success(response.data.message);
-                            this.autor_id = '';
-                            this.getAutores();
+                            this.materia_id = '';
+                            this.getMaterias();
                         } else
                             toastr.error(response.data.message);
                     }).catch(e => {
                         toastr.error("Error! vuelve a intentarlo más tarde.");
                     });
                 },
-                getAutores() {
-                    let url = "{{ url('autorMaterials') }}";
+                getMaterias() {
+                    let url = "{{ url('materiaMaterials') }}";
                     axios.get(url, {
                         params: {material_id: "{{$revista->material_id}}"}
                     }).then(response => {
-                        this.autores = response.data;
+                        this.materias = response.data;
                     });
                 },
-                eliminarAutor(id) {
+                eliminarMateria(id) {
                     if (confirm("Seguro que quiere eliminar este registro?")) {
-                        axios.delete("/autorMaterials/" + id).then(response => {
+                        axios.delete("/materiaMaterials/" + id).then(response => {
                             if (response.data.res) {
                                 toastr.success(response.data.message);
-                                this.getAutores();
+                                this.getMaterias();
                             } else {
                                 toastr.error(response.data.message);
                             }
@@ -103,3 +105,4 @@
         });
     </script>
 @endpush
+

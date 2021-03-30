@@ -8,7 +8,7 @@
             <th>Codigo</th>
             <th>Autores</th>
             <th>Materias</th>
-            
+
         </tr>
         </thead>
         <tbody>
@@ -20,15 +20,15 @@
                 <td>{{ $profocom->codigo }}</td>
                 <td>{{ $profocom->material->escritores }}</td>
                 <td>{{ $profocom->material->asignaturas }}</td>
-            
+
                 <td>
                     <div class='btn-group'>
 
                         <a href="{{ route('profocoms.show', [$profocom->id]) }}" class='btn btn-default btn-xs'><i
                                 class="glyphicon glyphicon-eye-open" title="Detalle"></i> </a>
 
-{{--                            <a href="{{ route('autores.edit', [$autor->id]) }}" class='btn btn-warning btn-xs'><i--}}
-{{--                                    class="glyphicon glyphicon-edit" title="Editar"></i></a>--}}
+                           <a href="{{ route('profocoms.edit', [$profocom->id]) }}" class='btn btn-warning btn-xs'><i
+                                    class="glyphicon glyphicon-edit" title="Editar"></i></a>
 
 
                     </div>

@@ -11,7 +11,7 @@
             <th>Costo</th>
             <th>Autores</th>
             <th>Materias</th>
-            
+
 
         </tr>
         </thead>
@@ -27,15 +27,15 @@
                 <td>{{ $libro->costo }}</td>
                 <td>{{ $libro->material->escritores }}</td>
                 <td>{{ $libro->material->asignaturas }}</td>
-            
+
                 <td>
                     <div class='btn-group'>
 
                         <a href="{{ route('libros.show', [$libro->id]) }}" class='btn btn-default btn-xs'><i
                                 class="glyphicon glyphicon-eye-open" title="Detalle"></i> </a>
 
-{{--                            <a href="{{ route('autores.edit', [$autor->id]) }}" class='btn btn-warning btn-xs'><i--}}
-{{--                                    class="glyphicon glyphicon-edit" title="Editar"></i></a>--}}
+                            <a href="{{ route('libros.edit', [$libro->id]) }}" class='btn btn-warning btn-xs'><i
+                                    class="glyphicon glyphicon-edit" title="Editar"></i></a>
 
 
                     </div>

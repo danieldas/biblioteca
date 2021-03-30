@@ -4,6 +4,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\StoreLibro;
+use App\Models\Autor;
 use App\Models\Material;
 use App\Models\libro;
 use Illuminate\Http\Request;
@@ -22,7 +24,7 @@ class LibroController extends Controller
         ->orWhereHas('material', function ($query) use ($filtro) {
             $query->where('titulo', 'like', $filtro)
             ->orWhere('anio_publicacion', 'like', $filtro);
-        })         
+        })
             ->orderByDesc('created_at')
             ->paginate('50');
         return view('libros.index', compact('libros'));
@@ -33,7 +35,7 @@ class LibroController extends Controller
         return view('libros.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreLibro $request)
     {
         $valores = $request->all();
 
@@ -49,5 +51,24 @@ class LibroController extends Controller
     {
         $libro = Libro::findOrFail($id);
         return view('libros.show', compact('libro'));
+    }
+
+    public function edit($id)
+    {
+        $libro = Libro::findOrFail($id);
+        return view('libros.edit', compact('libro'));
+    }
+
+    public function update(StoreLibro $request, $id)
+    {
+        $libro = Libro::findOrFail($id);
+
+        $libro->fill($request->all());
+        $libro->save();
+
+        return redirect()->route('libros.show',
+            ['libro' => $libro->id]
+        )->with('mensaje', 'El libro se ha modificado');
+
     }
 }

@@ -28,7 +28,7 @@ Route::resource('tesis', 'TesisController');
 Route::resource('profocoms', 'ProfocomController');
 Route::resource('revistas', 'RevistaController');
 Route::resource('autorMaterials', 'AutorMaterialController');
-
+Route::resource('materiaMaterials', 'MateriaMaterialController');
 
 Route::get('autores/{id}/{estado}/cambiarEstado', 'AutorController@cambiarEstado')->name('autores.cambiarEstado');
 Route::get('materias/{id}/{estado}/cambiarEstado', 'MateriaController@cambiarEstado')->name('materias.cambiarEstado');

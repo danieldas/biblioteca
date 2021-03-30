@@ -19,8 +19,13 @@ class Documento extends Migration
             $table->string('observacion', 200)->nullable();
             $table->date('fecha_presentacion');
             $table->date('fecha_retiro');
-            $table->unsignedInteger('lector_id');
             $table->boolean('alta')->default(true);
+            $table->unsignedInteger('lector_id');
+            $table->foreign('lector_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('lector');
 
             $table->timestamps();
         });
