@@ -17,6 +17,11 @@ class Estudiante extends Migration
 
             $table->increments('id');
             $table->unsignedInteger('lector_id');
+            $table->foreign('lector_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('lector');
 
             $table->timestamps();
         });

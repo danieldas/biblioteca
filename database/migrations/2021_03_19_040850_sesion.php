@@ -20,6 +20,11 @@ class Sesion extends Migration
             $table->dateTime('fin');
             $table->boolean('alta')->default(true);
             $table->unsignedInteger('lector_id');
+            $table->foreign('lector_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('lector');
 
 
             $table->timestamps();

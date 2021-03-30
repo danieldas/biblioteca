@@ -18,7 +18,18 @@ class Descarga extends Migration
             $table->increments('id');
             $table->date('fecha');
             $table->unsignedInteger('lector_id');
+            $table->foreign('lector_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('lector');
+
             $table->unsignedInteger('material_id');
+            $table->foreign('material_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('material');
 
             $table->timestamps();
         });

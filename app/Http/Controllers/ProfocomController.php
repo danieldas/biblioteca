@@ -4,6 +4,8 @@
 namespace App\Http\Controllers;
 
 
+
+use App\Http\Requests\StoreProfocom;
 use App\Models\Material;
 use App\Models\profocom;
 use Illuminate\Http\Request;
@@ -33,7 +35,7 @@ class ProfocomController extends Controller
         return view('profocoms.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreProfocom $request)
     {
         $valores = $request->all();
 
@@ -49,5 +51,28 @@ class ProfocomController extends Controller
     {
         $profocom = Profocom::findOrFail($id);
         return view('profocoms.show', compact('profocom'));
+    }
+
+    public function edit($id)
+    {
+        $profocom = Profocom::
+        join('material', 'profocom.material_id', '=', 'material.id')
+            ->where('profocom.id', $id)
+            ->first();
+           
+        return view('profocoms.edit', compact('profocom'));
+    }
+
+    public function update(StoreProfocom $request, $id)
+    {
+        $profocom = Profocom::findOrFail($id);
+
+        $profocom->fill($request->all());
+        $profocom->save();
+
+        return redirect()->route('profocoms.show',
+            ['profocom' => $profocom->id]
+        )->with('mensaje', 'Profocom se ha modificado');
+
     }
 }

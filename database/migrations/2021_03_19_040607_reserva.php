@@ -23,7 +23,17 @@ class Reserva extends Migration
                 'Desactivo',
             ])->default('Activo');
             $table->unsignedInteger('material_id');
+            $table->foreign('material_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('material');
             $table->unsignedInteger('lector_id');
+            $table->foreign('lector_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('lector');
 
             $table->timestamps();
         });

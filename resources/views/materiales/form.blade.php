@@ -191,19 +191,6 @@
     </div>
     <br><br>
 </div>
-{{--@if($errors->has('materia_id'))--}}
-{{--    <div class="form-group has-error">--}}
-{{--        <div class="help-block">--}}
-{{--            <label class="alert-danger">{{ $errors->first('materia_id') }}</label>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--@endif--}}
-{{--<div class="form-group">--}}
-{{--    <div class="col-lg-2">--}}
-{{--        {!! Form::label('Materia', 'Materia *:', ['class' => 'control-label']) !!}--}}
-{{--    </div>--}}
-{{--    <div class="col-lg-8">--}}
-{{--        {!! Form::select('materia_id', \App\Patrones\Fachada::getMaterias(), null, ['class' => 'form-control', 'required']) !!}--}}
-{{--    </div>--}}
-{{--    <br><br>--}}
-{{--</div>--}}
+
+
+

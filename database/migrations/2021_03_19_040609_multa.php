@@ -21,6 +21,11 @@ class Multa extends Migration
             $table->unsignedDecimal('monto',6,2)->nullable();
             $table->string('tipo', 200)->nullable();
             $table->unsignedInteger('prestamo_id');
+            $table->foreign('prestamo_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('prestamo');
 
             $table->timestamps();
         });

@@ -23,8 +23,19 @@ class Prestamo extends Migration
             $table->dateTime('fecha_devolucion');
             $table->string('observacion', 200)->nullable();
             $table->boolean('alta')->default(true);
+
             $table->unsignedBigInteger('reserva_id');
+            $table->foreign('reserva_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('reserva');
             $table->unsignedInteger('usuario_id');
+            $table->foreign('usuario_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('usuario');
 
             $table->timestamps();
         });
