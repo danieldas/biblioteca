@@ -25,10 +25,10 @@ class MaterialController extends Controller
             ->groupBy('material_id')
             ->first();
 
-        if(empty($materias))
+        if(empty($autores))
            return '';
         else
-            return $materias->nombres;
+            return $autores->nombres;
     }
     public function getMaterias($material_id)
     {

@@ -27,7 +27,6 @@ class Material extends Model
         'descripcion',
         'catalogo'
     ];
-
     public function getEscritoresAttribute()
     {
         $controlador = new MaterialController();
