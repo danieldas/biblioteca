@@ -16,12 +16,13 @@ class Reserva extends Migration
         Schema::create('reserva', function (Blueprint $table) {
 
             $table->bigIncrements('id');
-            $table->date('hora');
-            $table->date('fin');
+            $table->dateTime('inicio');
+            $table->dateTime('fin');
             $table->enum('estado', [
-                'Activo',
-                'Desactivo',
-            ])->default('Activo');
+                'Prestado',
+                'Espera',
+                'Terminado',
+            ])->default('Espera');
             $table->unsignedInteger('material_id');
             $table->foreign('material_id')
                 ->references('id')

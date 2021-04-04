@@ -43,7 +43,7 @@ class LibroController extends Controller
         $valores['material_id']= $material->id;
         $libro = Libro::create($valores);
         return redirect()
-            ->route('libros.show', ['libro' => $libro->id])
+            ->route('libros.edit', ['libro' => $libro->id])
             ->with('mensaje', 'El libro se ha creado con éxito');
     }
 
@@ -51,11 +51,15 @@ class LibroController extends Controller
     {
         $libro = Libro::findOrFail($id);
         return view('libros.show', compact('libro'));
+
     }
 
     public function edit($id)
     {
-        $libro = Libro::findOrFail($id);
+        $libro = Material::
+        join('libro', 'libro.material_id', '=', 'material.id')
+            ->where('libro.id', $id)
+            ->first();
         return view('libros.edit', compact('libro'));
     }
 

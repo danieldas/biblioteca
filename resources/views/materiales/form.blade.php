@@ -10,7 +10,7 @@
         {!! Form::label('Titulo', 'Título *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
-        {!! Form::text('titulo', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::text('titulo', null, ['class' => 'form-control', 'maxlength' => '50', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>
@@ -116,7 +116,7 @@
         {!! Form::label('Observacion', 'Observación *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
-        {!! Form::text('observacion', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::text('observacion', null, ['class' => 'form-control', 'maxlength' => '200','autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>
@@ -152,7 +152,7 @@
         {!! Form::label('Isbn', 'Isbn *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
-        {!! Form::text('isbn', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::text('isbn', null, ['class' => 'form-control', 'maxlength' => '50', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>
@@ -170,7 +170,7 @@
         {!! Form::label('Descripcion', 'Descripción *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
-        {!! Form::text('descripcion', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::text('descripcion', null, ['class' => 'form-control', 'maxlength' => '200', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>
@@ -187,7 +187,7 @@
         {!! Form::label('Catalogo', 'Catálogo *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
-        {!! Form::text('catalogo', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::text('catalogo', null, ['class' => 'form-control', 'maxlength' => '50', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>

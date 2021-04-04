@@ -13,7 +13,7 @@
     </div>
     <div class="col-lg-8">
 
-        {!! Form::text('nombre', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::text('nombre', null, ['class' => 'form-control', 'maxlength' => '50', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 

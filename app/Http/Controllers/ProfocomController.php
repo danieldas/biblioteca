@@ -43,7 +43,7 @@ class ProfocomController extends Controller
         $valores['material_id']= $material->id;
         $profocom = Profocom::create($valores);
         return redirect()
-            ->route('profocoms.show', ['profocom' => $profocom->id])
+            ->route('profocoms.edit', ['profocom' => $profocom->id])
             ->with('mensaje', 'Profocom se ha creado con éxito');
     }
 

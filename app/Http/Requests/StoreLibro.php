@@ -24,10 +24,22 @@ class StoreLibro extends FormRequest
     public function rules()
     {
         return [
-            'editorial' => 'required|min:2|max:100',
+            'editorial' => 'required|min:15|max:100',
             'edicion' => 'required',
             'procedencia' =>  'required',
-            'costo' =>  'required|digits_between:2.0,1000.0',
+            'costo' =>  'required|numeric|min:2.0|max:1000.0',
+
+            'titulo' => 'required|min:2|max:50',
+            'anio_publicacion' => 'required|numeric|min:1990|max:2050',
+            'nro_paginas' =>  'required|numeric|min:10|max:1000',
+            'forma' => 'required',
+            'idioma' => 'required',
+            'url' => 'required|url',
+            'observacion' => 'nullable|max:200',
+            'condicion' => 'required',
+            'isbn' => 'required|min:5|max:50',
+            'descripcion' => 'nullable|max:200',
+            'catalogo' => 'required|min:5|max:50',
         ];
     }
 }

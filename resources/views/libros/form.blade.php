@@ -61,7 +61,7 @@
         {!! Form::label('Costo', 'Costo *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
-        {!! Form::number('costo', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::number('costo', null, ['class' => 'form-control', 'maxlength' => '4','step'=>'0.01', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>
