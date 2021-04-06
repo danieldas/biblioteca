@@ -24,7 +24,8 @@
 
                     @include('materiales.form')
                     @include('tesis.form')
-                    
+                    @include('materiales.autores')
+                    @include('materiales.materias')
 
                     <div class="form-group col-sm-12 text-center">
                         {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}

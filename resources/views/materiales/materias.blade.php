@@ -58,15 +58,23 @@
             data: {
                 materia_id:'',
                 materias: [],
+                material_id:''
             },
             mounted(){
+                this.getMaterialId();
                 this.getMaterias();
             },
             methods: {
+                getMaterialId(){
+                    this.material_id = <?PHP echo !empty($revista) ? $revista->material_id
+                        :(!empty($libro) ? $libro->material_id
+                            :(!empty($profocom) ? $profocom->material_id
+                                : $tesis->material_id)); ?>;
+                },
                 guardarMateria() {
                     axios.post("/materiaMaterials", {
                         materia_id: this.materia_id,
-                        material_id: "{{$revista->material_id}}",
+                        material_id: this.material_id,
                     }).then(response => {
                         if (response.data.res) {
                             toastr.success(response.data.message);
@@ -81,7 +89,7 @@
                 getMaterias() {
                     let url = "{{ url('materiaMaterials') }}";
                     axios.get(url, {
-                        params: {material_id: "{{$revista->material_id}}"}
+                        params: {material_id: this.material_id}
                     }).then(response => {
                         this.materias = response.data;
                     });
