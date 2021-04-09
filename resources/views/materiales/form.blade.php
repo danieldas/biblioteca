@@ -43,7 +43,7 @@
 @endif
 <div class="form-group">
     <div class="col-lg-2">
-        {!! Form::label('NroPaginas', 'Nro Páginas *:', ['class' => 'control-label']) !!}
+        {!! Form::label('NroPaginas', 'NroPáginas *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
         {!! Form::number('nro_paginas', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
