@@ -35,6 +35,8 @@ Route::resource('reservas', 'ReservaController');
 Route::get('autores/{id}/{estado}/cambiarEstado', 'AutorController@cambiarEstado')->name('autores.cambiarEstado');
 Route::get('materias/{id}/{estado}/cambiarEstado', 'MateriaController@cambiarEstado')->name('materias.cambiarEstado');
 Route::get('carreras/{id}/{estado}/cambiarEstado', 'CarreraController@cambiarEstado')->name('carreras.cambiarEstado');
+Route::get('reservas/{id}/{ruta}/guardar', 'ReservaController@guardar')->name('reservas.guardar');
+
 
 //Route::get('/', function () {
 //    return view('layouts.app');

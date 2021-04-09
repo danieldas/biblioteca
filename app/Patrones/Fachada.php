@@ -20,7 +20,8 @@ class Fachada
     {
         return array(
             'Administrador'=> 'Administrador',
-            'Funcionario' => 'Funcionario'
+            'Bibliotecaria' => 'Bibliotecaria',
+            'Lector' => 'Lector'
         );
     }
     public static function getFormas()

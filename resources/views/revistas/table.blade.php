@@ -29,6 +29,8 @@
 
                             <a href="{{ route('revistas.edit', [$revista->id]) }}" class='btn btn-warning btn-xs'><i
                                     class="glyphicon glyphicon-edit" title="Editar"></i></a>
+                        <a href="{{ route('reservas.guardar', [$revista->material_id, 'revistas']) }}" class='btn btn-success btn-xs'><i
+                                class="glyphicon glyphicon-ok" title="Reservar"></i></a>
 
 
                     </div>

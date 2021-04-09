@@ -24,8 +24,7 @@ class StoreProfocom extends FormRequest
     public function rules()
     {
         return [
-            'codigo' =>  'required|string',
-
+            'codigo' =>  'regex:/^[P]{1}[R]{1}[O]{1}[0123456789]{4}$/',
             'titulo' => 'required|min:2|max:50',
             'anio_publicacion' => 'required|numeric|min:1990|max:2050',
             'nro_paginas' =>  'required|numeric|min:10|max:1000',

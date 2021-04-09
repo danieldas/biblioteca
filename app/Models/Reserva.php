@@ -12,9 +12,10 @@ class Reserva extends Model
     protected $primaryKey = 'id';
 
     public $fillable = ['id',
-        'inicio',
-        'fin',
-        'Estado'
-        
+
+        'estado',
+        'material_id',
+        'lector_id'
+
     ];
 }

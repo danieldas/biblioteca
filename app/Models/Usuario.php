@@ -39,4 +39,9 @@ class Usuario extends User
     {
         return $this->attributes['rol'] === Roles::funcionario;
     }
+
+    public function lector()
+    {
+        return $this->hasOne(\App\Models\Lector::class, 'usuario_id');
+    }
 }

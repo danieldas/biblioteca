@@ -66,4 +66,15 @@ class ReservaController extends Controller
         )->with('mensaje', 'La reserva ha modificado');
 
     }
+    public function guardar($material_id, $ruta){
+
+        $valores['lector_id']= auth()->user()->lector->id;
+        $valores['material_id']= $material_id;
+        $reserva = Reserva::create($valores);
+
+        $ruta=$ruta.".index";
+
+        return redirect()->route($ruta)->with('mensaje', 'La reserva ha sido registrada');
+
+    }
 }

@@ -20,9 +20,9 @@ class Usuario extends Migration
             $table->string('password', 200);
             $table->enum('rol', [
                 'Administrador',
-                'Funcionario',
-
-            ])->default('Funcionario');
+                'Bibliotecaria',
+                'Lector'
+            ])->default('Bibliotecaria');
             $table->string('nombre', 50);
             $table->string('apellido', 50);
             $table->string('ci', 20);

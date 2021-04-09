@@ -16,8 +16,6 @@ class Reserva extends Migration
         Schema::create('reserva', function (Blueprint $table) {
 
             $table->bigIncrements('id');
-            $table->dateTime('inicio');
-            $table->dateTime('fin');
             $table->enum('estado', [
                 'Prestado',
                 'Espera',
