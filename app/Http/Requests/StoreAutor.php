@@ -24,7 +24,7 @@ class StoreAutor extends FormRequest
     public function rules()
     {
         return [
-            'nombre' => 'required|min:2|max:100',
+            'nombre' => 'required|min:15|max:100',
 
         ];
     }

@@ -16,8 +16,15 @@ class Prestamo extends Migration
         Schema::create('prestamo', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->string('modalidad', 50);
-            $table->string('garantia', 20);
+            $table->enum('modalidad', [
+                'Domicilio',
+                'Sala',
+            ])->default('Sala');
+            $table->enum('garantia', [
+                'Carnet identidad',
+                'Tilulo de bachiller',
+                'Libreta de servicio militar',
+            ])->default('Carnet Identidad');
             $table->dateTime('fecha_prestamo');
             $table->date('fecha_limite');
             $table->dateTime('fecha_devolucion');

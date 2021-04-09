@@ -24,7 +24,7 @@ class StoreCarrera extends FormRequest
     public function rules()
     {
         return [
-            'nombre' => 'required|min:2|max:50',
+            'nombre' => 'required|min:15|max:50',
 
         ];
     }

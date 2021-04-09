@@ -16,14 +16,16 @@ class Lector extends Migration
         Schema::create('lector', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->string('expedido', 10);
-            $table->string('nombre', 100);
-            $table->string('apellido', 50);
-            $table->string('tipo', 50);
-            $table->string('password', 50);
             $table->string('direccion', 50);
             $table->unsignedInteger('celular' );
             $table->boolean('alta')->default(true);
+            
+            $table->unsignedInteger('usuario_id');
+            $table->foreign('usuario_id')
+                ->references('id')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')
+                ->on('usuario');
 
 
             $table->timestamps();

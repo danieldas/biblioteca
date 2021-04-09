@@ -27,6 +27,7 @@
                     @include('materiales.autores')
                     @include('materiales.materias')
 
+
                     <div class="form-group col-sm-12 text-center">
                         {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
                         <a href="{{ route('tesis.index') }}" class="btn btn-default">Cancelar</a>

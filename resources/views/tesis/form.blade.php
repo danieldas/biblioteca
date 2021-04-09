@@ -27,7 +27,7 @@
         {!! Form::label('Tutor', 'Tutor *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
-        {!! Form::text('tutor', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::text('tutor', null, ['class' => 'form-control', 'maxlength' => '70', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>
@@ -44,7 +44,7 @@
         {!! Form::label('Revisor', 'Revisor *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
-        {!! Form::text('revisor', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::text('revisor', null, ['class' => 'form-control', 'maxlength' => '70', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>

@@ -29,7 +29,7 @@
     </div>
     <div class="col-lg-8">
 
-        {!! Form::text('sigla', null, ['class' => 'form-control', 'maxlength' => '10', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::text('sigla', null, ['class' => 'form-control', 'maxlength' => '20', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>

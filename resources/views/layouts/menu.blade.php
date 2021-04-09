@@ -31,3 +31,12 @@
     <a href="{{ route('libros.index') }}"><i class="fa fa-list"></i><span>Libros</span></a>
 </li>
 
+<li >
+    <a href="{{ route('prestamos.index') }}"><i class="fa fa-list"></i><span>Prestamos</span></a>
+</li>
+
+<li >
+    <a href="{{ route('reservas.index') }}"><i class="fa fa-list"></i><span>Reservas</span></a>
+</li>
+
+

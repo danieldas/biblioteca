@@ -10,7 +10,7 @@
         {!! Form::label('Edicion', 'Edición *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
-        {!! Form::text('edicion', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::text('edicion', null, ['class' => 'form-control', 'maxlength' => '30', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>
@@ -27,7 +27,7 @@
         {!! Form::label('Editorial', 'Editorial *:', ['class' => 'control-label']) !!}
     </div>
     <div class="col-lg-8">
-        {!! Form::text('editorial', null, ['class' => 'form-control', 'maxlength' => '100', 'required', 'autocomplete'=>'off']) !!}
+        {!! Form::text('editorial', null, ['class' => 'form-control', 'maxlength' => '30', 'required', 'autocomplete'=>'off']) !!}
     </div>
     <br><br>
 </div>

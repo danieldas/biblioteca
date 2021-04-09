@@ -27,6 +27,7 @@ class StoreMateria extends FormRequest
             'nombre' => 'required|min:2|max:100',
             'sigla' =>  'required|min:2|max:20',
 
+            
         ];
     }
 }
