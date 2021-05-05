@@ -20,12 +20,23 @@ class AutorMaterialController
 
     public function store(Request $request)
     {
+        $consulta = AutorMaterial::where('autor_id', '=', $request->autor_id)->
+                                   where('material_id', '=', $request->material_id)->count();
+    if($consulta==0)
+    {
         $valores = $request->all();
         AutorMaterial::create($valores);
 
         $autores = $this->getAutores($request->material_id);
 
         return response()->json(['res' => true, 'autores' => $autores, 'message' => 'Autor registrado correctamente']);
+    }
+    else
+    {
+        return view('usuarios.create');
+       
+    }
+       
     }
 
     public function destroy($id)
